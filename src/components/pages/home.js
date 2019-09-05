@@ -5,12 +5,14 @@ import "../../assets/pages.css";
 class Home extends Component {
   render() {
     return(
-    	<div className="container-fluid">
-			<h1 className="title">Home</h1>
-			<br/>
-			<h1>
-				Hello friends!
-			</h1>
+    	<div className="flex-container">		
+    		<div id="welcome-banner" className="banner">
+    			<div id="welcome-banner-title">CsBasics</div>
+    			<div id="welcome-banner-text">Your online cs resource.</div>
+    		</div>
+    		<div>
+    			hello
+    		</div>
 		</div>
     );
   }

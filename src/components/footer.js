@@ -8,7 +8,7 @@ class Footer extends Component {
     return(
 		<footer>
 			<div>
-				<text className="FooterText"><FaRegCopyright className="CopyrightIcon" /> Michael Li</text>
+				<text id="FooterText"><FaRegCopyright id="CopyrightIcon" /> Michael Li</text>
 			</div>
 		</footer>
     );

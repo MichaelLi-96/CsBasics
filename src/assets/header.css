@@ -1,12 +1,19 @@
-#Navbar {
+#header {
 	left: 0;
     top: 0;
     width: 100%;
     position: absolute;
-    justify-content: center;
     background-color: #011E13;
 }
 
+#navbar {
+	justify-content: center;
+}
+
+#responsive-navbar-nav {
+	align-items: center;
+	justify-content: center;
+}
 nav {
 	text-align: center;  
 	align-items: center;

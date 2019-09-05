@@ -11,12 +11,12 @@ footer {
     overflow:hidden;
 }
 
-.FooterText {
+#FooterText {
 	color: white;
 	font-size: 20px;
 }
 
-.CopyrightIcon {
+#CopyrightIcon {
 	margin-bottom: 4px;
 	margin-right: 2px;
 	font-size: 18px;
