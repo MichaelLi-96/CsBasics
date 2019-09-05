@@ -1,4 +1,36 @@
-.title {
+#welcome-banner {
+	margin-top: -33px;
 	text-align: center;
-	align-items: center;
+}
+
+#welcome-banner-title {
+	color: #011E13;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+#welcome-banner-text {
+	color: #1ED761;
+	font-size: 20px;
+	margin-bottom: 125px;
+}
+
+.flex-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.banner {
+	width: 100%;
+	background-image: url("welcome.jpg");
+	background-color: black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 500px;
+	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	justify-content: center;
 }
