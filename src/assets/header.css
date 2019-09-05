@@ -1,0 +1,36 @@
+#Navbar {
+	left: 0;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    background-color: #011E13;
+}
+
+nav {
+	text-align: center;  
+	align-items: center;
+	justify-content: center;
+}
+
+nav ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	color: #FFF;
+	margin: 25px;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+nav ul li a:hover {
+	color: #1ED761;
+	text-decoration: none;
+}
