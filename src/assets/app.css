@@ -4,6 +4,10 @@ html {
 }
 
 body {
-    margin: 150px 0px 0px 0px;
+    margin: 125px 0px 50px 0px;
     /* bottom = footer height */
+}
+
+#body-container {
+	margin: 0px 75px 0px 75px;
 }

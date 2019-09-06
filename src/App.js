@@ -21,12 +21,14 @@ class App extends Component {
       <Router>
         <Header />
         <Route exact path='/' component={Home} />
-        <Route exact path='/DataTypes' component={DataTypes} />
-        <Route exact path='/ObjectOrientedProgramming' component={ObjectOrientedProgramming} />
-        <Route exact path='/DataStructures' component={DataStructures} />
-        <Route exact path='/Algorithms' component={Algorithms} />
-        <Route exact path='/Sorting' component={Sorting} />
-        <Route exact path='/Searching' component={Searching} />
+          <div id="body-container">
+            <Route exact path='/ObjectOrientedProgramming' component={ObjectOrientedProgramming} />
+            <Route exact path='/DataTypes' component={DataTypes} />
+            <Route exact path='/DataStructures' component={DataStructures} />
+            <Route exact path='/Algorithms' component={Algorithms} />
+            <Route exact path='/Sorting' component={Sorting} />
+            <Route exact path='/Searching' component={Searching} />
+          </div>
         <Footer />
       </Router>
     );

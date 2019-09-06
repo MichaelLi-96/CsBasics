@@ -27,7 +27,7 @@ class Home extends Component {
 	    			<div id="welcome-banner-text">Your online cs resource.</div>
 	    		</div>
 	    		
-    			{this.state.loading || this.state.person == "" ? (
+    			{this.state.loading || this.state.quote == ""? (
     				<div id="daily-quote">loading...</div>
     			) : (
     				<div className="quote-container">
