@@ -13,6 +13,7 @@ class Home extends Component {
 	}
 
 	async componentDidMount() {
+		//TheySaidSo Famous Quotes API
 		const url = "http://quotes.rest/qod.json?category=inspire";
 		const response = await fetch(url);
 		const data = await response.json();
@@ -27,10 +28,10 @@ class Home extends Component {
 	    			<div id="welcome-banner-text">Your online cs resource.</div>
 	    		</div>
 	    		
-    			{this.state.loading || this.state.quote == ""? (
+    			{this.state.loading || this.state.quote == "" ? (
     				<div id="daily-quote">loading...</div>
     			) : (
-    				<div className="quote-container">
+    				<div id="quote-container">
 	    				<div id="daily-quote-quote"><q>{this.state.quote}.</q></div>
 	    				<div id="daily-quote-author">- {this.state.author}</div>
     				</div>

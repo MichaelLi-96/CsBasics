@@ -23,7 +23,7 @@ class Header extends Component {
 				    <Nav>	
 						<ul>
 							<li>
-								<Link to="/ObjectOrientedProgramming">Object Oriented Programming</Link>
+								<Link to="/ObjectOrientedProgramming">Object-Oriented Programming</Link>
 							</li>
 							<li>
 								<Link to="/DataTypes">Data Types</Link>

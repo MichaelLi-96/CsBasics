@@ -15,6 +15,12 @@
 	margin-bottom: 125px;
 }
 
+#quote-container {
+	text-align: center;
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+
 #daily-quote-quote {
 	font-size: 35px;
 	font-weight: lighter;
