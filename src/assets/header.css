@@ -2,8 +2,9 @@
 	left: 0;
     top: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     background-color: #011E13;
+    z-index: 999;
 }
 
 #navbar {
