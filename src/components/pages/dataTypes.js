@@ -12,7 +12,7 @@ class DataTypes extends Component {
 					Any variable you create must be assigned to a data type. Data types can be divided into two groups, primitive and non-primitive.
 				</div>
 				<div className="content">
-					<div className="subtitle">Primitive Data Types</div>
+					<div className="subtitle-left">Primitive Data Types</div>
 					<div className="text-left">
 						Primitive data types are predefined by Java and there are eight different primitive data types. They consist of <code>byte</code>, 
 						&nbsp;<code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>boolean</code>, 
@@ -76,7 +76,7 @@ class DataTypes extends Component {
 							</tbody>
 						</Table>
 					</div>
-					<div className="subtitle">Non-Primitive Data Types</div>
+					<div className="subtitle-left">Non-Primitive Data Types</div>
 					<div className="text-left">
 						Non-primitive data types refer to objects that the programmer creates and are not predefined by Java. They are used to call 
 						methods from the class the object is derived from. Non-primitive data types can be null. Some examples of non-primitive data
