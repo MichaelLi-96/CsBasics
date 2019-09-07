@@ -18,26 +18,28 @@
  	justify-content: center;
 }
 
-.quote-container {
-	text-align: center;
-	margin-top: 35px;
-	margin-bottom: 35px;
-}
-
 .title {
 	font-size: 40px;
 	font-weight: bold;
 	width:100%;
 	text-align: center;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .subtitle {
 	font-size: 30px;
 	font-weight: bold;
 	text-align: left;
-	margin-top: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.subsubtitle {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
@@ -47,11 +49,19 @@
 	align-items: center;
 }
 
+.table-center {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
 .text-center {
 	font-size: 25px;
 	font-weight: normal;
 	color: black;
 	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 30px;
 }
 
 .text-left {
@@ -59,4 +69,12 @@
 	font-weight: normal;
 	color: black;
 	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.starIcon {
+	color: 
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
