@@ -1,9 +1,17 @@
 import React, { Component } from "react";
 import Table from "react-bootstrap/Table";
-import "../../assets/pages.css";
-import "../../assets/dataTypes.css"
+import "../../assets/css/pages.css";
+import "../../assets/css/dataTypes.css"
 
 class DataTypes extends Component {
+	componentDidMount() {
+	  window.scrollTo(0, 0);
+	}
+	
+	componentDidUpdate() {
+		window.scrollTo(0, 0);
+	}
+
   	render() {
 	    return(
 		    <div className="flex-container">

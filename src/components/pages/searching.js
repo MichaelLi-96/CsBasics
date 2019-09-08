@@ -1,7 +1,15 @@
 import React, { Component } from "react";
-import "../../assets/pages.css";
+import "../../assets/css/pages.css";
 
 class Searching extends Component {
+	componentDidMount() {
+	  window.scrollTo(0, 0);
+	}
+
+	componentDidUpdate() {
+		window.scrollTo(0, 0);
+	}
+	
   	render() {
     	return(
 	    	<div className="container-fluid">

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 //css
-import "./assets/app.css"
+import "./assets/css/app.css"
 
 //components
 import Header from "./components/header";
@@ -18,7 +18,7 @@ import Searching from "./components/pages/searching";
 class App extends Component {
   render() {
     return(
-      <Router>
+      <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Header />
         <Route exact path='/' component={Home} />
           <div id="body-container">

@@ -1,0 +1,35 @@
+#tab-container {
+	margin-top: 75px;
+	margin-bottom: 30px;
+	width:100%;
+}
+
+#nav {
+	text-align: center;
+	border-radius: 10px;
+	background-color: #011E13;
+}
+
+.nav-item {
+	font-size: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.nav-link {
+	font-size: 30px;
+	font-weight: normal;
+	color: white;
+}
+
+.nav-link:hover {
+	color: #1ED761;
+	text-decoration: none;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+	color: white;
+	font-weight: bold;
+	background-color: #1ED761;
+	text-decoration: none;
+}
