@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../../assets/pages.css";
-import "../../assets/home.css"
+import "../../assets/css/pages.css";
+import "../../assets/css/home.css"
 
 class Home extends Component {
 	constructor(props) {
@@ -14,12 +14,17 @@ class Home extends Component {
 
 	async componentDidMount() {
 		//TheySaidSo Famous Quotes API
+		window.scrollTo(0, 0);
 		const url = "http://quotes.rest/qod.json?category=inspire";
 		const response = await fetch(url);
 		const data = await response.json();
 		this.setState({ quote: data.contents.quotes[0].quote, author: data.contents.quotes[0].author, loading: false });
 	}
 
+	componentDidUpdate() {
+		window.scrollTo(0, 0);
+	}
+	
   	render() {
 	    return(
 	    	<div className="flex-container">		

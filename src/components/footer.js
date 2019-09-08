@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FaRegCopyright } from "react-icons/fa";
-import '../assets/footer.css';
+import '../assets/css/footer.css';
 
 class Footer extends Component {
   	render() {

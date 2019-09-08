@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import "../../assets/pages.css";
+import "../../assets/css/pages.css";
 import { FaStar } from "react-icons/fa";
 
-class Oop extends Component {
-  	render() {
-  		const classExample =
+const classExample =
 `//A car class that stores the model, color, and milesDriven
 public class Car {
 	//variables
@@ -68,6 +66,17 @@ public class CarTester {
     	System.out.println(color);
     }
 }`;
+
+class Oop extends Component {
+	componentDidMount() {
+	  window.scrollTo(0, 0);
+	}
+
+	componentDidUpdate() {
+		window.scrollTo(0, 0);
+	}
+	
+  	render() {
 	    return(
 	    	 <div className="flex-container">
 				<div className="title">Object-Oriented Programming</div>
@@ -111,7 +120,7 @@ public class CarTester {
 						<br />
 						<br />
 					</Container>
-					<div className="subtitle-left">Four Main OOP Principles</div>
+					<div className="subtitle-left">Four Main OOP Principles!</div>
 					<div className="subsubtitle-left">Encapsulation</div>
 					<div className="text-left">
 						Encapsulation is the practice of keeping fields(instance variables) private, only providing methods to access and modify them.

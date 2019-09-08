@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
-import logo from "../assets/logo.png";
-import "../assets/header.css"
+import logo from "../assets/images/logo.png";
+import "../assets/css/header.css"
 
 class Header extends Component {
   	render() {
 	    return(
 	    	<header id="header">
-				<Navbar id="navbar" collapseOnSelect expand="lg" variant="dark" sticky="top">
+				<Navbar id="navbar" collapseOnSelect expand="lg" variant="dark">
 					<Link to="/">
 					 	<Navbar.Brand style={styles.logo}>
 							<img
@@ -23,10 +23,10 @@ class Header extends Component {
 				    <Nav>	
 						<ul>
 							<li>
-								<Link to="/ObjectOrientedProgramming">Object-Oriented Programming</Link>
+								<Link to="/ObjectOrientedProgramming" href="#navbar">Object-Oriented Programming</Link>
 							</li>
 							<li>
-								<Link to="/DataTypes">Data Types</Link>
+								<Link to="/DataTypes" href="#header">Data Types</Link>
 							</li>
 							<li>
 								<Link to="/DataStructures">Data Structures</Link>
