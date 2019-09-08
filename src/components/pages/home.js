@@ -34,7 +34,9 @@ class Home extends Component {
 	    		</div>
 	    		
     			{this.state.loading || this.state.quote == "" ? (
-    				<div id="daily-quote">loading...</div>
+    				<div id="quote-container">
+    						<div id="daily-quote-quote">loading...</div>
+    				</div>
     			) : (
     				<div id="quote-container">
 	    				<div id="daily-quote-quote"><q>{this.state.quote}.</q></div>

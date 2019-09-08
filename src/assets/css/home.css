@@ -1,6 +1,7 @@
 #welcome-banner {
 	margin-top: -33px;
 	background-image: url("../images/welcome.jpg");
+	min-height: 625px;
 }
 
 #welcome-banner-title {

@@ -8,19 +8,27 @@ import "../../assets/css/dataStructures.css";
 
 
 class DataStructures extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			dataStructure: "arrays",
+		}
+	}
+
+
 	componentDidMount() {
 	  window.scrollTo(0, 0);
 	}
 
 	componentDidUpdate() {
-		window.scrollTo(0, 0);
+		window.scrollTo(0, 225);
 	}
-	
+
   	render() {
 		return(
 		    <div className="flex-container">
 				<div className="title">Data Structures</div>
-				<div className="text-center" id="starting-point">
+				<div className="text-center">
 					A data structure is a way of collecting and organising data in such a way that we can perform operations on these data in an effective way.
 				</div>
 				<div id="start" />
@@ -30,28 +38,31 @@ class DataStructures extends Component {
 							<Col sm={2}>
 						    	<Nav id="nav" className="flex-column" variant="pills">
 						     		<Nav.Item>
-						        		<Nav.Link href="#starting-point" eventKey="arrays">Arrays and ArrayLists</Nav.Link>
+						        		<Nav.Link onClick={()=>this.setState({dataStructure: "arrays"})} eventKey="arrays">Arrays</Nav.Link>
+						       		</Nav.Item>
+						       		<Nav.Item>
+						        		<Nav.Link onClick={()=>this.setState({dataStructure: "arraylists"})} eventKey="arraylists">ArrayLists</Nav.Link>
 						       		</Nav.Item>
 							        <Nav.Item>
-							        	<Nav.Link href="#starting-point" eventKey="stacks">Stacks</Nav.Link>
+							        	<Nav.Link onClick={()=>this.setState({dataStructure: "stacks"})} eventKey="stacks">Stacks</Nav.Link>
 							        </Nav.Item>
 							        <Nav.Item>
-						        		<Nav.Link href="#starting-point" eventKey="queues">Queues</Nav.Link>
+						        		<Nav.Link onClick={()=>this.setState({dataStructure: "queues"})} eventKey="queues">Queues</Nav.Link>
 						       		</Nav.Item>
 							        <Nav.Item>
-							        	<Nav.Link href="#starting-point" eventKey="linkedlists">LinkedLists</Nav.Link>
+							        	<Nav.Link onClick={()=>this.setState({dataStructure: "linkedlists"})} eventKey="linkedlists">LinkedLists</Nav.Link>
 							        </Nav.Item>
 							        <Nav.Item>
-							        	<Nav.Link href="#starting-point" eventKey="trees">Trees</Nav.Link>
+							        	<Nav.Link onClick={()=>this.setState({dataStructure: "trees"})} eventKey="trees">Trees</Nav.Link>
 							        </Nav.Item>
 							        <Nav.Item>
-						        		<Nav.Link href="#starting-point" eventKey="hash">HashMaps and HashSets</Nav.Link>
+						        		<Nav.Link onClick={()=>this.setState({dataStructure: "hash"})} eventKey="hash">HashMaps and HashSets</Nav.Link>
 						       		</Nav.Item>
 							        <Nav.Item>
-						        		<Nav.Link href="#starting-point" eventKey="heaps">Heaps</Nav.Link>
+						        		<Nav.Link onClick={()=>this.setState({dataStructure: "heaps"})} eventKey="heaps">Heaps</Nav.Link>
 						       		</Nav.Item>
 							        <Nav.Item>
-							        	<Nav.Link href="#starting-point" eventKey="graphs">Graphs</Nav.Link>
+							        	<Nav.Link onClick={()=>this.setState({dataStructure: "graphs"})} eventKey="graphs">Graphs</Nav.Link>
 							        </Nav.Item>
 						      	</Nav>
 						    </Col>
@@ -61,6 +72,13 @@ class DataStructures extends Component {
 					        		<Tab.Pane eventKey="arrays">
 					        			<Arrays />
 					        		</Tab.Pane>
+					        		<Tab.Pane eventKey="arraylists">
+					        			<div className="content">
+					        				<div className="subtitle-center">
+					        					ArrayLists
+					        				</div>
+					        			</div>
+					      			</Tab.Pane>
 					        		<Tab.Pane eventKey="stacks">
 					        			<div className="content">
 					        				<div className="subtitle-center">
