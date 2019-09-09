@@ -16,12 +16,12 @@ intArray[1] = 2;
 intArray[2] = 3;
 ...
 `
-class Matrixes extends Component {
+class Matrices extends Component {
   	render() {
 		return(
 			<div className="content">
 				<div className="subtitle-center">
-					Arrays
+					Matrices
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
@@ -52,4 +52,4 @@ class Matrixes extends Component {
   	}
 }
 
-export default Matrixes;
+export default Matrices;

@@ -45,7 +45,6 @@ class Arrays extends Component {
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{initalizeArray}
 					</SyntaxHighlighter>
-					<br />
 				</div>
 			</div>
 		);

@@ -13,6 +13,7 @@ const example =
 import java.util.List;
 
 public class Animals {
+	// The main function where we run our code
     public static void main(String[] args) {
         // Creating an ArrayList of Strings
         List<String> animals = new ArrayList<>();
@@ -26,12 +27,9 @@ public class Animals {
         // Retrieving the element at index 2 in the ArrayList, "Panda"
         String animal = animals.get(2);
 
+        // Removing the element at index 0, "Elephant"
+        // The ArrayList is now ["Lion", "Panda", "Hippo"]
         animals.remove(0);
-
-        // Adding an element at a particular index in an ArrayList
-        animals.add(2, "Elephant");
-
-        System.out.println(animals);
     }
 }`
 

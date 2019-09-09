@@ -8,7 +8,7 @@ class Header extends Component {
   	render() {
 	    return(
 	    	<header id="header">
-				<Navbar id="navbar" expand="lg" variant="dark">
+				<Navbar collapseOnSelect id="navbar" expand="lg" variant="dark">
 					<Link to="/">
 					 	<Navbar.Brand style={styles.logo}>
 							<img
@@ -21,26 +21,12 @@ class Header extends Component {
 				  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				  <Navbar.Collapse id="responsive-navbar-nav">
 				    <Nav>	
-						<ul>
-							<li>
-								<Link to="/ObjectOrientedProgramming">Object-Oriented Programming</Link>
-							</li>
-							<li>
-								<Link to="/DataTypes">Data Types</Link>
-							</li>
-							<li>
-								<Link to="/DataStructures">Data Structures</Link>
-							</li>
-							<li>
-								<Link to="/Algorithms">Algorithms</Link>
-							</li>
-							<li>
-								<Link to="/Sorting">Sorting</Link>
-							</li>
-							<li>
-								<Link to="/Searching">Searching</Link>
-							</li>
-						</ul>
+						<Nav.Link eventKey="oop"><Link to="/ObjectOrientedProgramming">Object-Oriented Programming</Link></Nav.Link>
+						<Nav.Link eventKey="dataTypes"><Link to="/DataTypes">Data Types</Link></Nav.Link>
+						<Nav.Link eventKey="dataStructures"><Link to="/DataStructures">Data Structures</Link></Nav.Link>
+						<Nav.Link eventKey="algorithms"><Link to="/Algorithms">Algorithms</Link></Nav.Link>
+						<Nav.Link eventKey="sorting"><Link to="/Sorting">Sorting</Link></Nav.Link>
+						<Nav.Link eventKey="searching"><Link to="/Searching">Searching</Link></Nav.Link>
 					</Nav>
 				  </Navbar.Collapse>
 				</Navbar>

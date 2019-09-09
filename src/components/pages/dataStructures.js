@@ -4,7 +4,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import Arrays from "./dataStructures/arrays.js";
 import Arraylists from "./dataStructures/arraylists.js";
-import Matrixes from "./dataStructures/matrixes.js";
+import Matrices from "./dataStructures/matrices.js";
 import Stacks from "./dataStructures/stacks.js";
 import Queues from "./dataStructures/queues.js";
 import LinkedLists from "./dataStructures/linkedlists.js";
@@ -34,7 +34,7 @@ class DataStructures extends Component {
 			window.scrollTo(0, 265);
 		}
 		else {
-			window.scrollTo(0, 1715);
+			window.scrollTo(0, 2010);
 		}
 	}
 
@@ -59,7 +59,7 @@ class DataStructures extends Component {
 						        		<Nav.Link onClick={()=>this.setState({dataStructure: "arraylists"})} eventKey="arraylists">ArrayLists</Nav.Link>
 						       		</Nav.Item>
 						       		<Nav.Item>
-						        		<Nav.Link onClick={()=>this.setState({dataStructure: "matrixes"})} eventKey="matrixes">Matrixes</Nav.Link>
+						        		<Nav.Link onClick={()=>this.setState({dataStructure: "matrices"})} eventKey="matrixes">Matrices</Nav.Link>
 						       		</Nav.Item>
 							        <Nav.Item>
 							        	<Nav.Link onClick={()=>this.setState({dataStructure: "stacks"})} eventKey="stacks">Stacks</Nav.Link>
@@ -94,7 +94,7 @@ class DataStructures extends Component {
 					        			<Arraylists />
 					      			</Tab.Pane>
 					      			<Tab.Pane eventKey="matrixes">
-					        			<Matrixes />
+					        			<Matrices />
 					      			</Tab.Pane>
 					        		<Tab.Pane eventKey="stacks">
 					        			<Stacks />
