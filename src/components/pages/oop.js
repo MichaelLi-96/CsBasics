@@ -6,7 +6,8 @@ import "../../assets/css/pages.css";
 import { FaStar } from "react-icons/fa";
 
 const classExample =
-`// A car class that stores the model, color, and milesDriven of a car object
+`// A car class that stores the model, color, and milesDriven
+// of a car object
 public class Car {
 	// variables
 	private String model;
@@ -47,7 +48,8 @@ public class Car {
 	}
 }`;
 		const objectExample =
-`// A car tester class where we can create car objects and test its methods
+`// A car tester class where we can create car objects and test its 
+// methods
 public class CarTester {
     // This is our main function where our code will run
     public static void main(String[] args) {
@@ -98,23 +100,25 @@ class Oop extends Component {
 					</div>
 					<Container fluid>
 						<Row>
-							<Col className="subsubtitle-center">
-								Creating a car class
-							</Col>
-							<Col className="subsubtitle-center">
-								Creating an car object using the car class
-							</Col>
-						</Row>
-						<Row>
 							<Col>
-								<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-									{classExample}
-								</SyntaxHighlighter>	
+								<Row style={{ justifyContent:"center" }}>
+									<div className="subsubtitle-center">Creating a car class</div>
+								</Row>
+								<Row>
+									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+										{classExample}
+									</SyntaxHighlighter>
+								</Row>
 							</Col>
-							<Col>					
-								<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-									{objectExample}
-								</SyntaxHighlighter>	
+							<Col>
+								<Row style={{ justifyContent:"center" }}>
+									<div className="subsubtitle-center">Creating an car object using the car class</div>
+								</Row>
+								<Row>
+									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+										{objectExample}
+									</SyntaxHighlighter>	
+								</Row>
 							</Col>
 						</Row>
 						<br />

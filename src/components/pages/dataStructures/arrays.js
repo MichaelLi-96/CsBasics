@@ -25,8 +25,8 @@ class Arrays extends Component {
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					An Array is a data structure that can store a <mark>fixed-size</mark> collection of elements with the same data type.
-					An Array is used to store a collection of data, but it is often more useful to think of an Array as a collection of 
+					An array is a data structure that can store a <mark>fixed-size</mark> collection of elements with the same data type.
+					An array is used to store a collection of data, but it is often more useful to think of an array as a collection of 
 					variables of the same type. Below is an int Array of size of 9.
 					<img src={array} className="banner" id="array-img" /> 
 					To initialize an int Array of size 10, you write:
@@ -34,7 +34,7 @@ class Arrays extends Component {
 						int[] newArray = new int[10];
 					</SyntaxHighlighter>
 					<br />
-					Arrays like many other data structures can store any data type you want it to. For example, if you created an Apple class and wanted an Array of 10 apple
+					Arrays like many other data structures can store any data type you want it to. For example, if you created an Apple class and wanted an array of 10 apple
 					objects you could write:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						Apple[] appleArray = new Apple[10];

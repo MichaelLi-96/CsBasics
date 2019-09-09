@@ -25,9 +25,7 @@ class Matrices extends Component {
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					An array is a data structure that can store a <mark>fixed-size</mark> collection of elements with the same data type.
-					An array is used to store a collection of data, but it is often more useful to think of an array as a collection of 
-					variables of the same type. Below is an int array of size of 9.
+					Matrices or multidimensional arrays can be defined as an array of arrays. 
 									<img src={array} className="banner" id="array-img" /> 
 					To initialize an int array of size 10, you write:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
