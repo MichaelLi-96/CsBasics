@@ -8,7 +8,7 @@ class Header extends Component {
   	render() {
 	    return(
 	    	<header id="header">
-				<Navbar id="navbar" collapseOnSelect expand="lg" variant="dark">
+				<Navbar id="navbar" expand="lg" variant="dark">
 					<Link to="/">
 					 	<Navbar.Brand style={styles.logo}>
 							<img
@@ -23,10 +23,10 @@ class Header extends Component {
 				    <Nav>	
 						<ul>
 							<li>
-								<Link to="/ObjectOrientedProgramming" href="#navbar">Object-Oriented Programming</Link>
+								<Link to="/ObjectOrientedProgramming">Object-Oriented Programming</Link>
 							</li>
 							<li>
-								<Link to="/DataTypes" href="#header">Data Types</Link>
+								<Link to="/DataTypes">Data Types</Link>
 							</li>
 							<li>
 								<Link to="/DataStructures">Data Structures</Link>

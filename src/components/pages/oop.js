@@ -6,28 +6,28 @@ import "../../assets/css/pages.css";
 import { FaStar } from "react-icons/fa";
 
 const classExample =
-`//A car class that stores the model, color, and milesDriven
+`// A car class that stores the model, color, and milesDriven of a car object
 public class Car {
-	//variables
+	// variables
 	private String model;
 	private String color;
 	private int milesDriven;
 
-	//constructor 
-	//The constructor is where you set up all your class variables
-	//The constructor name is always the same as your class name
-	//This is what happens when you create a new Car object
+	// constructor 
+	// The constructor is where you set up all your class variables
+	// The constructor name is always the same as your class name
+	// This is what happens when you create a new Car object
 	publc Car(String model, String color) {
 		this.model = model;
 		this.color = color;
 		milesDriven = 0;
 	}
-	//methods 
-	//Methods can be mutators or accessors
-	//Accessor methods only retrieve objects data
-	//Mutator methods change the objects data
+	// methods 
+	// Methods can be mutators or accessors
+	// Accessor methods only retrieve objects data
+	// Mutator methods change the objects data
 
-	//accessors (getters)
+	// accessors (getters)
 	public String getModel() {
 		return model;
 	}
@@ -38,7 +38,7 @@ public class Car {
 		return milesDriven;
 	}
 
-	//mutators (setters)
+	// mutators (setters)
 	public void setToNewColor(String newColor) {
 		color = newColor;
 	}
@@ -47,19 +47,19 @@ public class Car {
 	}
 }`;
 		const objectExample =
-`//A car tester class where we can create car objects and test its methods
+`// A car tester class where we can create car objects and test its methods
 public class CarTester {
-    //This is our main function where our code will run
+    // This is our main function where our code will run
     public static void main(String[] args) {
-    	//This creates a new car object with the model "Truck"
+    	// This creates a new car object with the model "Truck"
     	Car myCar = new Car("Truck", "Blue");
 
-    	//Store the color of the myCar object in a String called color
+    	// Store the color of the myCar object in a String called color
     	String color = myCar.getColor();
-    	This will print out "Blue"
+    	// This will print out "Blue"
     	System.out.println(color);
 
-    	//Set the color of the myCar object to white
+    	// Set the color of the myCar object to white
     	myCar.setToNewColor("White");
     	color = myCar.getColor();
     	//This will now print out "White"
