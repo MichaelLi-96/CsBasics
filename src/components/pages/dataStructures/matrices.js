@@ -30,7 +30,7 @@ class Matrices extends Component {
 					<br />
 					<br />
 					When you construct a matrix, you have to specify that the array has more than one dimension by adding more than one size parameter in brackets.
-					To construct a 2-dimensional array with 4 rows and 6 columns, you would write:
+					To initialize a 2-dimensional array with 4 rows and 6 columns, you would write:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{initalizeMatrix}
 					</SyntaxHighlighter>

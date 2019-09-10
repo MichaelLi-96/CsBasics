@@ -23,13 +23,13 @@ nav {
 	justify-content: center;
 }
 
-a {
+nav a {
 	color: white;
 	font-size: 21px;
 	text-transform: uppercase;
 }
 
-a:hover {
+nav a:hover {
 	color: #1ED761;
 	text-decoration: none;
 }

@@ -9,8 +9,7 @@ const initializeArrayList =
 `List<Integer> myArrayList = new ArrayList<>();`
 
 const example =
-`import java.util.ArrayList;
-import java.util.List;
+`import java.util.*;
 
 public class Animals {
 	// The main function where we run our code
@@ -56,7 +55,7 @@ class Arraylists extends Component {
 					<br />
 					ArrayLists already has built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank" rel='noreferrer noopener'>here</a>.
-					Below is a basic example of how to add, retrieve, and remove elements from an ArrayList.
+					Below is a basic example of how to add, retrieve, and remove ArrayList elements:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{example}
 					</SyntaxHighlighter>
