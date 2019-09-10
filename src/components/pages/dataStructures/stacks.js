@@ -21,7 +21,7 @@ class Stacks extends Component {
 		return(
 			<div className="content">
 				<div className="subtitle-center">
-					Arrays
+					Stacks
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
