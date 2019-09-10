@@ -21,7 +21,6 @@ class DataStructures extends Component {
 		super(props);
 		this.state = {
 			dataStructure: "arrays",
-			width: window.innerWidth,
 		}
 	}
 
@@ -30,12 +29,8 @@ class DataStructures extends Component {
 	}
 
 	componentDidUpdate() {
-		if(this.state.width > 500) {
-			window.scrollTo(0, 265);
-		}
-		else {
-			window.scrollTo(0, 2010);
-		}
+		document.getElementById("anchor-name").scrollIntoView();
+
 	}
 
   	render() {
@@ -46,7 +41,6 @@ class DataStructures extends Component {
 					A data structure is a way of collecting and organising data in such a way that we can perform operations on these data in an effective way. <br />
 					Using the right data structure in different situations and constraints can save a computer time and space!
 				</div>
-				<div id="start" />
 				<div id="tab-container">
 					<Tab.Container defaultActiveKey="arrays">
 						<Row>
@@ -86,7 +80,8 @@ class DataStructures extends Component {
 						    </Col>
 						    <Col sm={1} />
 					    	<Col sm={8}>
-					      		<Tab.Content>
+					      		<Tab.Content id="info"> 
+					      			<div id="anchor-name" style={{position: "absolute", top: -150, left: 0}} />
 					        		<Tab.Pane eventKey="arrays">
 					        			<Arrays />
 					        		</Tab.Pane>
