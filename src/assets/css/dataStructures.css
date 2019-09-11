@@ -40,3 +40,9 @@
 #table-title {
 	font-weight: bold;
 }
+
+#img {
+	width:50%;
+	height: auto;
+	border-radius: 10%;
+}

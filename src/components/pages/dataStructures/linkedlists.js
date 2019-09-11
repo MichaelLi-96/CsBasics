@@ -4,7 +4,6 @@ import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaStar } from "react-icons/fa";
 import "../../../assets/css/pages.css";
 import "../../../assets/css/dataStructures.css";
-import array from "../../../assets/images/array.jpg";
 
 const initalizeArray =
 `int[] intArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -21,14 +20,12 @@ class Linkedlists extends Component {
 		return(
 			<div className="content">
 				<div className="subtitle-center">
-					Arrays
+					LinkedLists
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					An array is a data structure that can store a <mark>fixed-size</mark> collection of elements with the same data type.
-					An array is used to store a collection of data, but it is often more useful to think of an array as a collection of 
-					variables of the same type. Below is an int array of size of 9.
-									<img src={array} className="banner" id="array-img" /> 
+					An LinkedList 
+
 					To initialize an int array of size 10, you write:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						int[] newArray = new int[10];

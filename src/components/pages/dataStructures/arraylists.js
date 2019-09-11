@@ -42,8 +42,8 @@ class Arraylists extends Component {
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
 					ArrayLists in Java implement the list interface and are used to store a dynamically sized collection of elements. 
-					Contrary to arrays that are fixed in size, an ArrayList grows its size automatically when new elements are added to it and
-					shrinks the size when the elements are removed. An ArrayList also preserves order, so it maintains the insertion order of elements.
+					Contrary to arrays that are fixed in size, an ArrayList <mark>grows its size automatically when new elements are added to it and
+					shrinks the size when the elements are removed</mark>. An ArrayList also preserves order, so it maintains the insertion order of elements.
 					Note that you cannot create an ArrayList of primitive types like <code>int</code>, <code>char</code>, etc. You need to use boxed 
 					types like <code>Integer</code>, <code>Character</code>, <code>Boolean</code>, etc.
 					<br/ >
@@ -53,9 +53,9 @@ class Arraylists extends Component {
 						{initializeArrayList}
 					</SyntaxHighlighter>
 					<br />
-					ArrayLists already has built in methods to do common functions which can be 
+					In Java, ArrayLists already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank" rel='noreferrer noopener'>here</a>.
-					Below is a basic example of how to add, retrieve, and remove ArrayList elements:
+					Below is a basic example on how to add, retrieve, and remove ArrayList elements:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{example}
 					</SyntaxHighlighter>

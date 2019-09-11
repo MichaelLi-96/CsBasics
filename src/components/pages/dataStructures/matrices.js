@@ -25,7 +25,7 @@ class Matrices extends Component {
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					Matrices or multidimensional arrays can be defined as an array of arrays. The most commonly used matrix is a 2-dimensional array that is used to 
+					Matrices or multidimensional arrays can be defined as an <mark>array of arrays</mark>. The most commonly used matrix is a 2-dimensional array that is used to 
 					represent a table with rows and columns. Each cell in a 2-dimensional array or &quot;table&quot; must have the same data type.
 					<br />
 					<br />

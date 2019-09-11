@@ -24,12 +24,12 @@ public class StackExample {
         myStack.push("21");
         myStack.push("40");
 
-        // Removing the top most element of myStack
+        // Removing the top most or most recent element of myStack
         // Removing from a stack is also called popping from a stack
-        // The Stack is now ["56", "75", "21"]
+        // myStack is now ["56", "75", "21"]
         myStack.pop();
 
-        // The Stack is now ["56", "75"]
+        // myStack is now ["56", "75"]
         myStack.pop();
     }
 }`
@@ -43,20 +43,19 @@ class Stacks extends Component {
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					A stack is a data structure that follows the Last In First Out(LIFO) order. This means that the last element that is added to the stack
-					is the first one to be retrieved out. Insertion and deletion of an element happens on the same end. A real world example of a stack would 
+					A stack is a data structure that follows the <mark>Last In First Out(LIFO) order</mark>. This means that the most recent element that was added into the stack
+					will be the first one to be retrieved out. Insertion and deletion of an element happens on the same end. A real world example of a stack would 
 					be a stack of plates. When you add a plate, you would stack it on the top most plate. When you remove a plate, you would take the top most 
-					plate off the stack.
+					plate off the stack.<br />
 					<br />
-					<br />				
 					To initialize a new stack of Integers, you would write:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{initalizeStack}
 					</SyntaxHighlighter>
 					<br />
-					Stacks already has built in methods to do common functions which can be 
+					In Java, stacks already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html" target="_blank" rel='noreferrer noopener'>here</a>.
-					Below is a basic example of how to add and remove stack elements:  
+					Below is a basic example on how to add and remove stack elements:  
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{stackExample}
 					</SyntaxHighlighter>
