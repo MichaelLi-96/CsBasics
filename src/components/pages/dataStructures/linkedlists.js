@@ -66,7 +66,7 @@ class Linkedlists extends Component {
 
 					<br />
 					LinkedLists already have built in methods to do common functions which can be 
-					found <a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html" target="_blank" rel='noreferrer noopener'>here</a>.
+					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add and remove LinkedList elements:  
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{LinkedlistExample}

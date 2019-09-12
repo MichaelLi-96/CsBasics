@@ -52,12 +52,12 @@ class Header extends Component {
 				  <Navbar.Toggle />
 				  <Navbar.Collapse>
 				    <Nav>	
-				    	<Nav.Link eventKey="oop"><Link to="/ObjectOrientedProgramming">Object-Oriented Programming</Link></Nav.Link>
-						<Nav.Link eventKey="dataTypes"><Link to="/DataTypes">Data Types</Link></Nav.Link>
-						<Nav.Link eventKey="dataStructures"><Link to="/DataStructures">Data Structures</Link></Nav.Link>
-						<Nav.Link eventKey="algorithms"><Link to="/Algorithms">Algorithms</Link></Nav.Link>
-						<Nav.Link eventKey="sorting"><Link to="/Sorting">Sorting</Link></Nav.Link>
-						<Nav.Link eventKey="searching"><Link to="/Searching">Searching</Link></Nav.Link>
+				    	<Nav.Link eventKey="oop" as={Link} to="/ObjectOrientedProgramming">Object-Oriented Programming</Nav.Link>
+						<Nav.Link eventKey="dataTypes" as={Link} to="/DataTypes">Data Types</Nav.Link>
+						<Nav.Link eventKey="dataStructures" as={Link} to="/DataStructures">Data Structures</Nav.Link>
+						<Nav.Link eventKey="algorithms" as={Link} to="/Algorithms">Algorithms</Nav.Link>
+						<Nav.Link eventKey="sorting" as={Link} to="/Sorting">Sorting</Nav.Link>
+						<Nav.Link eventKey="searching" as={Link} to="/Searching">Searching</Nav.Link>
 					</Nav>
 				  </Navbar.Collapse>
 				</Navbar>

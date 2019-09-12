@@ -41,19 +41,18 @@
 	margin-bottom: 10px;
 }
 
-
-.subsubtitle-left {
-	font-size: 25px;
+.subsubtitle-center {
+	font-size: 30px;
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.subsubtitle-center {
-	font-size: 25px;
+.subsubtitle-left {
+	font-size: 30px;
 	font-weight: bold;
-	text-align: center;
+	text-align: left;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }

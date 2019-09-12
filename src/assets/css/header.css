@@ -23,14 +23,15 @@ nav {
 	justify-content: center;
 }
 
-nav a {
-	color: white;
+a.nav-link {
+	color: white !important;
 	font-size: 23px;
 	text-transform: uppercase;
 }
 
-nav a:hover {
-	color: #1ED761;
+a.nav-link:hover {
+	color: #1ED761 !important;
 	font-weight: bold;
 	text-decoration: none;
 }
+

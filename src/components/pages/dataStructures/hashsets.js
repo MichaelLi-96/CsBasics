@@ -31,11 +31,11 @@ public class HashSetExample {
         
         // myHashSet is still: ["A", "B", "C", "D", "E"]
 
-        // Removing elements to the HashSet
+        // Removing elements from the HashSet
         myHashSet.remove("D");
         myHashSet.remove("A");
 
-        // myHashSet is still: [B", "C", "E"]
+        // myHashSet is: [B", "C", "E"]
     }
 }`
 
@@ -48,8 +48,14 @@ class Hashmaps extends Component {
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					A HashSet implements the Set interface and uses a HashMap to store <mark>a collection of unique elements</mark>. The main key characteristics of 
-					a HashSet is that it cannot contain duplicate values, is unordered meaning it does not keep track of insertion order, and allows null values. <br />
+					A HashSet implements the Set interface and uses a HashMap to store <mark>a collection of unique elements</mark>. <br/>
+					<br/>
+					The main key characteristics of HashSets are: 
+					<ul>
+						<li>HashSets cannot contain duplicate values</li>
+						<li>HashSets are unordered, does not guarantee the insertion order of elements</li>
+						<li>HashSets allow NULL values</li>
+					</ul>
 					<br />
 					To initialize a HashSet of strings, you would write:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
@@ -57,7 +63,7 @@ class Hashmaps extends Component {
 					</SyntaxHighlighter>
 					<br />
 					In Java, HashSets already have built in methods to do common functions which can be 
-					found <a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html" target="_blank" rel='noreferrer noopener'>here</a>.
+					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add and remove HashSet elements:<br />
 					<br />
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
