@@ -32,7 +32,7 @@ class DataTypes extends Component {
 						type is used to store a single character, surrounded by single quotes.
 					</div>
 					<div className="table-center"> 
-						<Table striped bordered hover>
+						<Table striped bordered variant="dark">
 							<thead>
 								<tr>
 									<th>Primitive Data Type</th>

@@ -6,60 +6,69 @@ import "../../assets/css/pages.css";
 import { FaStar } from "react-icons/fa";
 
 const classExample =
-`//A car class that stores the model, color, and milesDriven
+`// A car class that stores the model, color, and milesDriven
+// of a car object
 public class Car {
-	//variables
+	// instance variables or class variables
 	private String model;
 	private String color;
 	private int milesDriven;
 
-	//constructor 
-	//The constructor is where you set up all your class variables
-	//The constructor name is always the same as your class name
-	//This is what happens when you create a new Car object
+	// constructor 
+	// The constructor is where you set up all your class variables
+	// The constructor name is always the same as your class name
+	// This is what is called upon when you create a new Car object
 	publc Car(String model, String color) {
 		this.model = model;
 		this.color = color;
 		milesDriven = 0;
 	}
-	//methods 
-	//Methods can be mutators or accessors
-	//Accessor methods only retrieve objects data
-	//Mutator methods change the objects data
+	
+	// methods 
+	// Methods must return a data type or nothing at all(void)
+	// Methods can be mutators or accessors
+	// Accessor methods only retrieve objects data
+	// Mutator methods change the objects data
 
-	//accessors (getters)
+	// accessors (getters)
+	// Returns the current model of the car
 	public String getModel() {
 		return model;
 	}
+	// Returns the current color of the car
 	public String getColor() {
 		return color;
 	}
+	// Returns the current amount of miles the car has driven
 	public int getMilesDriven() {
 		return milesDriven;
 	}
 
-	//mutators (setters)
+	// mutators (setters)
+	// Sets the color of the car to a new color
 	public void setToNewColor(String newColor) {
 		color = newColor;
 	}
+	// Add miles drove to the total amount of miles driven
 	public void drive(int milesDrove) {
 		milesDriven = milesDriven + milesDrove;
 	}
 }`;
 		const objectExample =
-`//A car tester class where we can create car objects and test its methods
+`// A car tester class where we can create car objects and test its 
+// methods
 public class CarTester {
-    //This is our main function where our code will run
+    // This is our main function where our code will run
     public static void main(String[] args) {
-    	//This creates a new car object with the model "Truck"
+    	// This creates a new car object with the model "Truck"
     	Car myCar = new Car("Truck", "Blue");
 
-    	//Store the color of the myCar object in a String called color
+    	// Store the color of the myCar object in a String called color
     	String color = myCar.getColor();
-    	This will print out "Blue"
+    	// This will print out "Blue"
     	System.out.println(color);
 
-    	//Set the color of the myCar object to white
+    	// Set the color of the myCar object to white
     	myCar.setToNewColor("White");
     	color = myCar.getColor();
     	//This will now print out "White"
@@ -93,28 +102,30 @@ class Oop extends Component {
 					</div>
 					<div className="text-left">
 						<FaStar className="starIcon"/>
-						A object is a program entity that the programmer can manipulate by calling its methods. 
+						A object is a program entity that the programmer can manipulate by calling methods of the objects class. 
 						<mark> An object is an instance of a class.</mark>
 					</div>
 					<Container fluid>
 						<Row>
-							<Col className="subsubtitle-center">
-								Creating a car class
-							</Col>
-							<Col className="subsubtitle-center">
-								Creating an car object using the car class
-							</Col>
-						</Row>
-						<Row>
 							<Col>
-								<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-									{classExample}
-								</SyntaxHighlighter>	
+								<Row style={{ justifyContent:"center" }}>
+									<div className="subsubtitle-center">Creating a car class</div>
+								</Row>
+								<Row>
+									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+										{classExample}
+									</SyntaxHighlighter>
+								</Row>
 							</Col>
-							<Col>					
-								<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-									{objectExample}
-								</SyntaxHighlighter>	
+							<Col>
+								<Row style={{ justifyContent:"center" }}>
+									<div className="subsubtitle-center">Creating an car object using the car class</div>
+								</Row>
+								<Row>
+									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+										{objectExample}
+									</SyntaxHighlighter>	
+								</Row>
 							</Col>
 						</Row>
 						<br />

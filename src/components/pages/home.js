@@ -30,11 +30,13 @@ class Home extends Component {
 	    	<div className="flex-container">		
 	    		<div id="welcome-banner" className="banner">
 	    			<div id="welcome-banner-title">CsBasics</div>
-	    			<div id="welcome-banner-text">Your online cs resource.</div>
+	    			<div id="welcome-banner-text">Your online cs resource. Java edition.</div>
 	    		</div>
 	    		
     			{this.state.loading || this.state.quote == "" ? (
-    				<div id="daily-quote">loading...</div>
+    				<div id="quote-container">
+    						<div id="daily-quote-quote">loading...</div>
+    				</div>
     			) : (
     				<div id="quote-container">
 	    				<div id="daily-quote-quote"><q>{this.state.quote}.</q></div>

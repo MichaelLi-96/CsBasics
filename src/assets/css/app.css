@@ -7,10 +7,19 @@ html {
 body {
 	/*top & bottom */
 	/* bottom = footer height */
-    margin: 130px 0px 75px 0px;
+    margin: 130px 0px 85px 0px;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 #body-container {
 	/*right & left */
 	margin: 0px 75px 0px 75px;
 }
+
