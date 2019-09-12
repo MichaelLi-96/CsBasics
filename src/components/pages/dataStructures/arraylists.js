@@ -14,16 +14,16 @@ const example =
 public class Animals {
 	// The main function where we run our code
     public static void main(String[] args) {
-        // Creating an ArrayList of Strings
+        // Creating an ArrayList of Strings named animals
         List<String> animals = new ArrayList<>();
 
-        // Adding new elements to the ArrayList at the end
+        // Adding new elements to the end of the ArrayList
         animals.add("Elephant");
         animals.add("Lion");
         animals.add("Panda");
         animals.add("Hippo");
 
-        // Retrieving the element at index 2 in the ArrayList, "Panda"
+        // Retrieving the element at index 2, "Panda"
         String animal = animals.get(2);
 
         // Removing the element at index 0, "Elephant"
@@ -53,7 +53,7 @@ class Arraylists extends Component {
 						{initializeArrayList}
 					</SyntaxHighlighter>
 					<br />
-					In Java, ArrayLists already have built in methods to do common functions which can be 
+					ArrayLists already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add, retrieve, and remove ArrayList elements:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">

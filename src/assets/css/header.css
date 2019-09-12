@@ -25,11 +25,12 @@ nav {
 
 nav a {
 	color: white;
-	font-size: 21px;
+	font-size: 23px;
 	text-transform: uppercase;
 }
 
 nav a:hover {
 	color: #1ED761;
+	font-weight: bold;
 	text-decoration: none;
 }

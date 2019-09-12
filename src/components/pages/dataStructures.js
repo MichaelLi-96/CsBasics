@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { Row, Col, Tab, Nav } from "react-bootstrap";
 import Arrays from "./dataStructures/arrays.js";
 import Arraylists from "./dataStructures/arraylists.js";
 import Matrices from "./dataStructures/matrices.js";
 import Stacks from "./dataStructures/stacks.js";
 import Queues from "./dataStructures/queues.js";
 import LinkedLists from "./dataStructures/linkedlists.js";
+import HashSets from "./dataStructures/hashsets.js";
 import HashMaps from "./dataStructures/hashmaps.js";
 import Trees from "./dataStructures/trees.js";
 import Heaps from "./dataStructures/heaps.js";
@@ -65,7 +64,10 @@ class DataStructures extends Component {
 							        	<Nav.Link onClick={()=>this.setState({dataStructure: "linkedlists"})} eventKey="linkedlists">LinkedLists</Nav.Link>
 							        </Nav.Item>
 							        <Nav.Item>
-						        		<Nav.Link onClick={()=>this.setState({dataStructure: "hash"})} eventKey="hash">HashMaps and HashSets</Nav.Link>
+						        		<Nav.Link onClick={()=>this.setState({dataStructure: "hashsets"})} eventKey="hashsets">HashSets</Nav.Link>
+						       		</Nav.Item>
+							        <Nav.Item>
+						        		<Nav.Link onClick={()=>this.setState({dataStructure: "hashmaps"})} eventKey="hashmaps">HashMaps</Nav.Link>
 						       		</Nav.Item>
 						       		<Nav.Item>
 							        	<Nav.Link onClick={()=>this.setState({dataStructure: "trees"})} eventKey="trees">Trees</Nav.Link>
@@ -100,11 +102,14 @@ class DataStructures extends Component {
 					        		<Tab.Pane eventKey="linkedlists">
 					        			<LinkedLists />
 					      			</Tab.Pane>
-									<Tab.Pane eventKey="hash">
-					        			<Trees />
+									<Tab.Pane eventKey="hashsets">
+					        			<HashSets />
+					      			</Tab.Pane>
+									<Tab.Pane eventKey="hashmaps">
+					        			<HashMaps />
 					      			</Tab.Pane>
 					      			<Tab.Pane eventKey="trees">
-					        			<HashMaps />
+					        			<Trees />
 					        		</Tab.Pane>
 					      			<Tab.Pane eventKey="heaps">
 					        			<Heaps />

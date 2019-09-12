@@ -14,22 +14,22 @@ const stackExample =
 public class StackExample {
 	// The main function where we run our code
     public static void main(String[] args) {
-        // Creating an Stack of Integers
+        // Creating an Stack of Integers named myStack
         Stack<Integer> myStack = new Stack<>();
 
-        // Adding new elements to the top of myStack
+        // Adding new elements to the top of the stack
         // Adding to a stack is also called pushing to a stack
-        myStack.push("56");
-        myStack.push("75");
-        myStack.push("21");
-        myStack.push("40");
+        myStack.push(56);
+        myStack.push(75);
+        myStack.push(21);
+        myStack.push(40);
 
-        // Removing the top most or most recent element of myStack
+        // Removing the top most or most recent element of the stack
         // Removing from a stack is also called popping from a stack
-        // myStack is now ["56", "75", "21"]
+        // myStack is now [56, 75, 21]
         myStack.pop();
 
-        // myStack is now ["56", "75"]
+        // myStack is now [56, 75]
         myStack.pop();
     }
 }`
@@ -48,12 +48,12 @@ class Stacks extends Component {
 					be a stack of plates. When you add a plate, you would stack it on the top most plate. When you remove a plate, you would take the top most 
 					plate off the stack.<br />
 					<br />
-					To initialize a new stack of Integers, you would write:
+					To initialize a stack of Integers, you would write:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{initalizeStack}
 					</SyntaxHighlighter>
 					<br />
-					In Java, stacks already have built in methods to do common functions which can be 
+					Stacks already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add and remove stack elements:  
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
