@@ -16,7 +16,7 @@ public class HashMapExample {
 	// The main function where we run our code
     public static void main(String[] args) {
         // Creating an HashMap of Strings mapped to Doubles named groceryItems
-        HashMap<String, Double> groceryItems = new HashMap<>(); 
+        Map<String, Double> groceryItems = new HashMap<>(); 
 
         // Adding elements to the HashMap
         // Adding into a HashMap is also called putting into a HashMap
@@ -48,21 +48,21 @@ class Hashmaps extends Component {
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
 					A HashMap implements the Map interface and allows the storage of <mark>key and value (key, value) pairs</mark>. Each key is able to map to a 
-					corresponding value. A real world example where a HashMap would be useful for is mapping the names of grocery items to their prices. 
+					corresponding value. A real world example where a HashMap would be useful is mapping the names of grocery items to their prices. 
 					Then when you want the price of a certain grocery item, all you have to do it call the name of the grocery item in the HashMap and the HashMap will
 					give you back its price. <br />
 					<br />
-					To initialize a HashMap of Strings mapping to Integers, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-						{initalizeHashMap}
-					</SyntaxHighlighter>
-					<br />
-					Some important points to remember:
+					<div className="subsubtitle-left">Key Characteristics</div>
 					<ul>
 						<li>HashMaps cannot have duplicate keys but can have duplicate values</li>
 					 	<li>HashMaps are unordered, does not guarantee the insertion order of elements</li>
 					 	<li>A HashMap can only have one NULL key but can have multiple NULL values</li>
 					</ul>
+					<br />
+					To initialize a HashMap of Strings mapping to Integers, you would write:
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+						{initalizeHashMap}
+					</SyntaxHighlighter>
 					<br />
 					In Java, HashMaps already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html" target="_blank" rel='noreferrer noopener'>here</a>.

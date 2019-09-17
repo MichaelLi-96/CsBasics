@@ -90,11 +90,13 @@ class DataTypes extends Component {
 						methods from the class the object is derived from. Non-primitive data types can be null. Some examples of non-primitive data
 						types are strings, arrays, and classes.
 					</div>
+					<div className="subsubtitle-left">Examples:</div>
 					<div className="text-left">
-						Examples:<br/>
-						<code>String mystring = new String("Learning cs is fun!");</code><br/>
-						<code>int[] numberArray = new int[10];</code><br/>
-						<code>MyClass myObject = new MyClass();</code>
+						<ul>
+							<li><code>String mystring = new String("Learning cs is fun!");</code></li>
+							<li><code>int[] numberArray = new int[10];</code></li>
+							<li><code>MyClass myObject = new MyClass();</code></li>
+						</ul>
 					</div>
 					<div className="text-left">
 						In this case, the objects named myString, numberArrray, and myObject are non-primitive types.

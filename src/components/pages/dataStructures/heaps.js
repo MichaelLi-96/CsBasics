@@ -16,6 +16,7 @@ intArray[1] = 2;
 intArray[2] = 3;
 ...
 `
+
 class Heaps extends Component {
   	render() {
 		return(
