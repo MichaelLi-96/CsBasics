@@ -12,8 +12,8 @@ import DataTypes from "./components/pages/dataTypes";
 import ObjectOrientedProgramming from "./components/pages/oop";
 import DataStructures from "./components/pages/dataStructures";
 import Algorithms from "./components/pages/algorithms";
+import BigO from "./components/pages/bigO";
 import Sorting from "./components/pages/sorting";
-import Searching from "./components/pages/searching";
 
 class App extends Component {
   render() {
@@ -26,8 +26,8 @@ class App extends Component {
             <Route exact path='/DataTypes' component={DataTypes} />
             <Route exact path='/DataStructures' component={DataStructures} />
             <Route exact path='/Algorithms' component={Algorithms} />
+            <Route exact path='/bigO' component={BigO} />
             <Route exact path='/Sorting' component={Sorting} />
-            <Route exact path='/Searching' component={Searching} />
           </div>
         <Footer />
       </Router>

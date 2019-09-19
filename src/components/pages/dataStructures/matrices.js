@@ -66,7 +66,7 @@ class Matrices extends Component {
 									<td>nums[1][0]</td>
 									<td>nums[1][1]</td>
 									<td>nums[1][2]</td>
-									<td>nums[1][3]7</td>
+									<td>nums[1][3]</td>
 									<td>nums[1][4]</td>
 								</tr>
 								<tr>

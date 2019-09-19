@@ -4,49 +4,86 @@ import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaStar } from "react-icons/fa";
 import "../../../assets/css/pages.css";
 import "../../../assets/css/dataStructures.css";
-import array from "../../../assets/images/array.jpg";
 
-const initalizeArray =
-`int[] intArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
-//or
-int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-//or manually
-intArray[0] = 1;
-intArray[1] = 2;
-intArray[2] = 3;
-...
-`
+const initalizeMinHeap = 
+`PriorityQueue<Integer> minHeap = new PriorityQueue<>();`
+
+const initalizeMaxHeap = 
+`PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+// or use a lamba expression
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>((x, y) -> y - x);`
+
+const priorityQueueExample =
+`import java.util.*;
+
+public class minHeapExample {
+	// The main function where we run our code
+    public static void main(String[] args) {
+        // Creating min-heap of Integers using a PriorityQueue
+         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+        // Adding elements into the min-heap
+        minHeap.add(55);
+        minHeap.add(30);
+        minHeap.add(25);
+        minHeap.add(40);
+
+        // Retrieving the root node of the min-heap, the smallest value element
+        // minElement will be 25
+        int minElement = PriorityQueue.peek();
+
+        // Removing the root node of the min-heap, the smallest value element
+        // Removing from a PriorityQueue is also called polling from a PriorityQueue
+        minHeap.poll();
+        // minElement is now 30
+        minElement = minHeap.poll();
+    }
+}`
 
 class Heaps extends Component {
   	render() {
 		return(
 			<div className="content">
 				<div className="subtitle-center">
-					Arrays
+					Heaps
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					An array is a data structure that can store a <mark>fixed-size</mark> collection of elements with the same data type.
-					An array is used to store a collection of data, but it is often more useful to think of an array as a collection of 
-					variables of the same type. Below is an int array of size of 9.
-									<img src={array} className="banner" id="array-img" /> 
-					To initialize an int array of size 10, you write:
+					A heap is a data structure that is based upon the structure of a <mark>complete binary tree</mark>. In a complete binary tree, all the levels of the
+					tree are filled except for the last level where all the nodes are left aligned. Heaps can generally be split into two categories, min-heap and max-heap.
+					In Java, heaps are implemented using the PriorityQueue class.<br />
+					<br />
+					<div className="subsubtitle-left">Min-Heap</div>
+					In a min-heap, a nodes value is less than or equal to all the values of its children nodes. This means that the root node contains the smallest value
+					of the entire tree. By default, a min-heap is implemented by a PriorityQueue. To initialize a min-heap of Integers, you would write: 
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-						int[] newArray = new int[10];
+						{initalizeMinHeap}
 					</SyntaxHighlighter>
 					<br />
-					Arrays like many other data structures can store any data type you want it to. For example, if you created an Apple class and wanted an array of 10 apple
-					objects you could write:
+					<div className="subsubtitle-left">Max-Heap</div>
+					In a max-heap, a nodes value is greater than or equal to all the values of its children nodes. This means that the root node contains the largest value
+					of the entire tree. Since a PriorityQueue implements a min-heap by default, we need to reverse the order of the heap to transform it to a max-heap.
+					To initialize a max-heap of Integers, you would write: 
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-						Apple[] appleArray = new Apple[10];
+						{initalizeMaxHeap}
 					</SyntaxHighlighter>
 					<br />
-					<mark>Remember, the starting index of all data structures is 0, not 1!</mark> To access or retrieve the 5th element of an int array,
-					you would write int[4] and not int[5]. Arrays are initialized empty. To initialize an int array with values, you could write: 
+					PriorityQueues already have built in methods to do common functions which can be 
+					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html" target="_blank" rel='noreferrer noopener'>here</a>.
+					Below is a basic example on how to add, retrieve, remove elements in a min-heap using a PriorityQueue:<br />
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-						{initalizeArray}
+						{priorityQueueExample}
 					</SyntaxHighlighter>
 					<br />
+					<div className="subsubtitle-left">Mapping Heap Elements to an Array</div>
+					Even though a heap is represented as a complete binary tree, it can be implemented using an array. In this case, each node of a heap tree can be
+					mapped to an array element. For an array element with index i,
+					<br />
+					<ul>
+						<li>its parent is at index <b>( i - 1 ) / 2</b></li> 
+						<li>its left child is at index <b>( 2 * i ) + 1</b></li> 
+						<li>its right child is at index <b>( 2 * i ) + 2</b></li> 
+					</ul>
 				</div>
 			</div>
 		);

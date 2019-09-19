@@ -45,9 +45,10 @@ class Trees extends Component {
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					A tree is a hierarchic data structure that is a collection of nodes, specifically where each node can have its own children nodes. A node object in a 
-					tree stores element data as well as a reference to its next set of nodes. A node can also be null. Each node is linked together using pointers and 
-					addresses. In a tree, only one node is designated to be the root node while all the remaining nodes will be children of the root node.<br />
+					A tree is a hierarchic data structure that is a collection of nodes, specifically where <mark>each node can have its own children nodes</mark>. A 
+					node object in a tree stores element data as well as a reference to its next set of nodes. A node can also be null. Each node is linked together 
+					using pointers and addresses. In a tree, only one node is designated to be the root node while all the remaining nodes will be children of the root 
+					node.<br />
 					<br />
 					Here is an example node class for a tree where each node is holding an int value and can have multiple children:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
@@ -66,7 +67,7 @@ class Trees extends Component {
 					</ul>
 					<br />
 					<div className="subsubtitle-left">Binary Trees</div>
-					A binary tree is a tree where each node can have at most two children. We usually name the two children the left and right nodes. Below is 
+					A binary tree is a tree where each node can have <mark>at most two children (0-2)</mark>. We usually name the two children the left and right nodes. Below is 
 					an example node class for a binary tree:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
 						{binaryTreeNodeClass}
@@ -75,7 +76,8 @@ class Trees extends Component {
 					<div className="subsubtitle-left">Types of Binary Trees</div>
 					<ul>
 						<li><b>Full Binary Tree</b>: A tree where each node has either 0 or 2 children.</li>
-						<li><b>Complete Binary Tree</b>: A tree where all its levels are completely filled except the last level. </li>
+						<li><b>Complete Binary Tree</b>: A tree where all its levels are completely filled except for the last level and the nodes on the last level
+						are left aligned. </li>
 					 	<li><b>Perfect Binary Tree</b>: A tree where all nodes have 2 children and all leaf nodes are on the same level.</li>
 					</ul>
 					<br />

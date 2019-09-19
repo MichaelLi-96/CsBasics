@@ -69,13 +69,19 @@ class Linkedlists extends Component {
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
 					A LinkedList stores elements as a <mark>sequence of nodes</mark>. A node object in a LinkedList stores element data as well as a reference to the 
-					next and/or previous node. A node can also be null. Each node is linked together using pointers and addresses. The strengths of using a LinkedList 
-					is that insertion and deletions of nodes are easy as we can just keep track of the head(first) and tail(last) nodes. The weaknesses of using a 
-					LinkedList is that trying to find a specific node which contains the data you are searching for requires you to start from the head node and 
-					iterate through the link until you find it.<br />
+					next and/or previous node. A node can also be null. Each node is linked together using pointers and addresses.<br />
 					<br />
+					<div className="subsubtitle-left">Singly and Doubly LinkedLists</div>
 					A LinkedList can be a <mark>singly</mark> LinkedList or a <mark>doubly</mark> LinkedList. In a singly LinkedList, a node only has one pointer to the next node. In
 					a doubly LinkedList, a node has both a pointer to the next node and its previous node. <br />
+					<br />
+					<div className="subsubtitle-left">The Strengths and Weaknesses of LinkedLists</div>
+					<ul>
+						<li>The strengths of using a LinkedList is that insertion and deletions of nodes are way easier. There is no memory wastage or reallocation when inserting or deleting
+					a node since memory is allocated only when required. Only the next and/or previous address pointers of a node need to be updated.</li>
+						<li>The weaknesses of using a LinkedList is that trying to access a specific node which contains the data you are searching for requires you to start from the head node and 
+					iterate through the link until you find it. There is no way to directly access an element like we do in an array by index.</li>
+					</ul>
 					<br />
 					Here is an example node class for a doubly LinkedList where each node has an int value and has a pointer to the next and previous node:
 					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">

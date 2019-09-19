@@ -4,48 +4,43 @@ import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaStar } from "react-icons/fa";
 import "../../../assets/css/pages.css";
 import "../../../assets/css/dataStructures.css";
-import array from "../../../assets/images/array.jpg";
 
-const initalizeArray =
-`int[] intArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
-//or
-int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-//or manually
-intArray[0] = 1;
-intArray[1] = 2;
-intArray[2] = 3;
-...
-`
 class Graphs extends Component {
   	render() {
 		return(
 			<div className="content">
 				<div className="subtitle-center">
-					Arrays
+					Graphs
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					An array is a data structure that can store a <mark>fixed-size</mark> collection of elements with the same data type.
-					An array is used to store a collection of data, but it is often more useful to think of an array as a collection of 
-					variables of the same type. Below is an int array of size of 9.
-									<img src={array} className="banner" id="array-img" /> 
-					To initialize an int array of size 10, you write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-						int[] newArray = new int[10];
-					</SyntaxHighlighter>
+					A graph is a non-structured <mark>collection of vertices connected by edges</mark>. A vertex can also be called a node and an edge can also be called a line or arc.
+					A vertex in a graph stores element data as well as references to other vertices. A graph is typically used for representing a network.
+					A vertex would represent some sort of entity and an edge would represent the relationship between two entities. A real world application of graphs would 
+					be a social media site. A vertex would represent a person and contain their personal information while an edge would represent the relationship between two 
+					people. <br />
 					<br />
-					Arrays like many other data structures can store any data type you want it to. For example, if you created an Apple class and wanted an array of 10 apple
-					objects you could write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-						Apple[] appleArray = new Apple[10];
-					</SyntaxHighlighter>
+					<div className="subsubtitle-left">Types of Graphs</div>
+					<ul>
+						<li><b>Undirected Graph</b>: The order of vertices pairs and direction of the edge between two vertices do not matter. 
+						This means that the vertices pair (u, v) can also be represented as (v, u). Edges are usually represented as straight lines.</li>
+						<li><b>Directed Graph</b>: The order of vertices pairs and direction of the edge between two vertices do matter. 
+						This means that the vertices pair (u, v) cannot be represented as (v, u). Edges are usually represented as straight lines with arrows.</li>
+						<li><b>Cyclic Graph</b>: A directed graph that has at least one cycle, a path along the directed edges from a vertex to itself.</li>
+						<li><b>Weighted Graph</b>: The edges of a graph carry a relative weight. The idea is that some edges or paths can be more expensive to take than others 
+						and the cost is represented by the edge weight.</li>
+					</ul>
 					<br />
-					<mark>Remember, the starting index of all data structures is 0, not 1!</mark> To access or retrieve the 5th element of an int array,
-					you would write int[4] and not int[5]. Arrays are initialized empty. To initialize an int array with values, you could write: 
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
-						{initalizeArray}
-					</SyntaxHighlighter>
-					<br />
+					<div className="subsubtitle-left">Graph Representations</div>
+					Graphs are most commonly represented by an adjacency matrix and adjacency list.<br />
+					<ul>
+						<li><b>Adjacency Matrix</b>: An adjacency matrix is a square N x N matrix with dimensions equal to the number of vertices in the graph. The value of 
+						each element in the adjacency matrix is either 0 or 1. A value of 0 means that the two vertices in the row and column are not connected to each 
+						other by an edge. A value of 1 means that the two vertices in the row and column are connected together by an edge.</li>
+						<li><b>Adjacency List</b>: An adjacency list is essentially an array of lists. The length of the array is equal to the number of vertices in the 
+						graph because each array element represents one vertex in the graph. At array[i], there contains a list that has all adjacent vertices 
+						of the ith vertex.</li>
+					</ul>
 				</div>
 			</div>
 		);
