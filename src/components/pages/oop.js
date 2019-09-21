@@ -23,7 +23,7 @@ public class Car {
 		this.color = color;
 		milesDriven = 0;
 	}
-	
+
 	// accessors methods (getters)
 	// Returns the current model of the car
 	public String getModel() {
@@ -92,13 +92,11 @@ class Oop extends Component {
 					<div className="subtitle-left">What makes up an object-oriented program?</div>
 					<div className="subsubtitle-left">Classes</div>
 					<div className="text-left">
-						A class describes a set of objects with the same behavior, containing variables and methods common to all objects of that kind. 
-						<mark>A class is a template for objects.</mark>
+						A class describes a set of objects with the same behavior, containing variables and methods common to all objects of that kind. <mark>A class is a template for objects.</mark>
 					</div>
 					<div className="subsubtitle-left">Objects</div>
 					<div className="text-left">
-						An object is a program entity that the programmer can manipulate by calling methods of the objects class. 
-						<mark> An object is an instance of a class.</mark>
+						An object is a program entity that the programmer can manipulate by calling methods of the objects class. <mark>An object is an instance of a class.</mark>
 					</div>
 					<div className="subsubtitle-left">Methods</div>
 					<div className="text-left">

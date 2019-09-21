@@ -28,7 +28,7 @@ class Arrays extends Component {
 					An array is a data structure that can store a <mark>fixed-size</mark> collection of elements with the same data type.
 					An array is used to store a collection of data, but it is often more useful to think of an array as a collection of 
 					variables of the same type. Below is an int Array of size of 9.
-					<div className="table-center"> 
+					<div className="table-center-margin"> 
 						<Table striped bordered variant="dark" >
 							<tbody>
 								<tr>

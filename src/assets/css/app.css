@@ -18,6 +18,10 @@ code {
     monospace;
 }
 
+mark {
+  background-color: #D7FDE8;
+}
+
 #body-container {
 	/*right & left */
 	margin: 0px 75px 0px 75px;
