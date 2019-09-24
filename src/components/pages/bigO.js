@@ -16,7 +16,7 @@ public int getArrayElement(int[] arr) {
 
 const timeEx2 =
 `// This method takes O(log(n)) time because at every step, the input is divided in half
-public void printNum(int n) {
+public void printMids(int n) {
 	int start = 0;
 	int end = n;
 	while(start < end) {
@@ -71,7 +71,7 @@ class Searching extends Component {
 	    	<div className="flex-container">
 				<div className="title">Big-O Notation</div>
 				<div className="text-center">
-					Big-O notation is used to describe the <mark>worst case time and space complexity</mark> of an algorithm. This means we are viewing the amount of 
+					Big-O notation is used to describe the worst case time and space complexity of an algorithm. This means we are viewing the amount of 
 					time an algorithm takes to run and how much space an algorithm uses in memory relative to our input. Generally, the trade off for a more time 
 					efficient algorithm is more space usage and vice versa, a more space efficient algorithm usually takes more time to run.
 				</div>
@@ -157,7 +157,7 @@ class Searching extends Component {
 					<div className="subtitle-left">Drop the Constants and Less Significant Terms!</div>
 					<div className="text-left">
 						As an algorithms input n grows infinitely larger, the impact of constants and less significant terms in an algorithms runtime become less and 
-						less meaningful to the overall runtime. Thus, the big-o complexity of an algorithm is displayed as the most significant term without constants.
+						less meaningful overtime. Thus, the big-o complexity of an algorithm is commonly displayed as the most significant term without constants.
 					</div>
 					<div className="subsubtitle-left">Examples:</div>
 					<div className="text-left">
