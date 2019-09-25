@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { FaStar } from "react-icons/fa";
 import "../../../assets/css/pages.css";
 import "../../../assets/css/dataStructures.css";
 

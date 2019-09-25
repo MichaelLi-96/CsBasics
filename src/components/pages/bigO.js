@@ -71,8 +71,8 @@ class Searching extends Component {
 	    	<div className="flex-container">
 				<div className="title">Big-O Notation</div>
 				<div className="text-center">
-					Big-O notation is used to describe the worst case time and space complexity of an algorithm. This means we are viewing the amount of 
-					time an algorithm takes to run and how much space an algorithm uses in memory relative to our input. Generally, the trade off for a more time 
+					Big-O notation is used to describe the <mark>worst case</mark> time and space complexity of an algorithm. This means we are looking at the amount of 
+					time an algorithm takes to run and how much space an algorithm uses in memory <mark>relative to our input</mark>. Generally, the trade off for a more time 
 					efficient algorithm is more space usage and vice versa, a more space efficient algorithm usually takes more time to run.
 				</div>
 				<div className="content">
@@ -157,7 +157,7 @@ class Searching extends Component {
 					<div className="subtitle-left">Drop the Constants and Less Significant Terms!</div>
 					<div className="text-left">
 						As an algorithms input n grows infinitely larger, the impact of constants and less significant terms in an algorithms runtime become less and 
-						less meaningful overtime. Thus, the big-o complexity of an algorithm is commonly displayed as the most significant term without constants.
+						less meaningful overtime. Thus, the big-o complexity of an algorithm is commonly displayed as the <mark>most significant term</mark> without constants.
 					</div>
 					<div className="subsubtitle-left">Examples:</div>
 					<div className="text-left">
@@ -173,7 +173,7 @@ class Searching extends Component {
 					</div>
 					<div className="subtitle-left">Space Complexity</div>
 					<div className="text-left">
-						When we talk about space complexity, we are looking at the total space of newly created variables we are allocating in the algorithm relative to our
+						When we talk about space complexity, we are looking at the total space of <mark>newly created variables</mark> we are allocating in the algorithm relative to our
 						input. The space complexity of an algorithm does not include the space taken by the input, only additional space.
 					</div>
 					<div className="subsubtitle-left">Examples:</div>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { FaStar } from "react-icons/fa";
 import "../../../assets/css/pages.css";
 import "../../../assets/css/dataStructures.css";
 
@@ -79,7 +78,7 @@ class Heap extends Component {
 				<div className="text-left">
 					The heap sort algorithm sorts an array or list by using a max or min heap. For example, by using a max heap we always have access to the maximum
 					value element. Heapsort removes the maximum value element which is the root node and places it at the end of the array. After the removal, the last 
-					element of the heap is moved to the root node and is then bubbled down (heapified) to the right position to maintain the max heap property.
+					element of the heap is moved to the root node position and is then bubbled down (heapified) to the right position to maintain the max heap property.
 				</div>
 				<div className="subtitle-left">
 					Code Implementation:
