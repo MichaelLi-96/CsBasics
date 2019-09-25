@@ -12,8 +12,8 @@ class Home extends Component {
 		}
 	}
 
+	//TheySaidSo Famous Quotes API
 	async componentDidMount() {
-		//TheySaidSo Famous Quotes API
 		window.scrollTo(0, 0);
 		const url = "http://quotes.rest/qod.json?category=inspire";
 		const response = await fetch(url);
@@ -33,7 +33,7 @@ class Home extends Component {
 	    			<div id="welcome-banner-text">Your online cs resource. Java edition.</div>
 	    		</div>
 	    		
-    			{this.state.loading || this.state.quote == "" ? (
+    			{this.state.loading || this.state.quote === "" ? (
     				<div id="quote-container">
     						<div id="daily-quote-quote">loading...</div>
     				</div>

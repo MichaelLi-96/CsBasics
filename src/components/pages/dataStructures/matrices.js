@@ -42,7 +42,7 @@ class Matrices extends Component {
 					</SyntaxHighlighter>
 					<br />
 					The table below shows how you would retrieve elements from a 4 rows x 5 columns 2-dimensional array named nums:
-					<div className="table-center"> 
+					<div className="table-center-margin"> 
 						<Table striped bordered variant="dark" >
 							<tbody>
 								<tr>
@@ -66,7 +66,7 @@ class Matrices extends Component {
 									<td>nums[1][0]</td>
 									<td>nums[1][1]</td>
 									<td>nums[1][2]</td>
-									<td>nums[1][3]7</td>
+									<td>nums[1][3]</td>
 									<td>nums[1][4]</td>
 								</tr>
 								<tr>

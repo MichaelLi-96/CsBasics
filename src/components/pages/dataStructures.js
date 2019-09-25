@@ -29,7 +29,6 @@ class DataStructures extends Component {
 
 	componentDidUpdate() {
 		document.getElementById("anchor-name").scrollIntoView();
-
 	}
 
   	render() {

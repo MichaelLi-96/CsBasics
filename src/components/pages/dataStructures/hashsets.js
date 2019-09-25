@@ -48,9 +48,10 @@ class Hashmaps extends Component {
 				</div>
 				<div className="text-left"> 
 					<FaStar className="starIcon"/>
-					A HashSet implements the Set interface and uses a HashMap to store <mark>a collection of unique elements</mark>. <br/>
+					A HashSet implements the Set interface and uses a HashMap to store <mark>a collection of unique elements</mark>. This means
+					that an element can only exist once in a set. <br/>
 					<br/>
-					The main key characteristics of HashSets are: 
+					<div className="subsubtitle-left">Key Characteristics</div>
 					<ul>
 						<li>HashSets cannot contain duplicate values</li>
 						<li>HashSets are unordered, does not guarantee the insertion order of elements</li>

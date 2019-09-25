@@ -23,14 +23,8 @@ public class Car {
 		this.color = color;
 		milesDriven = 0;
 	}
-	
-	// methods 
-	// Methods must return a data type or nothing at all(void)
-	// Methods can be mutators or accessors
-	// Accessor methods only retrieve objects data
-	// Mutator methods change the objects data
 
-	// accessors (getters)
+	// accessors methods (getters)
 	// Returns the current model of the car
 	public String getModel() {
 		return model;
@@ -44,7 +38,7 @@ public class Car {
 		return milesDriven;
 	}
 
-	// mutators (setters)
+	// mutators methods (setters)
 	// Sets the color of the car to a new color
 	public void setToNewColor(String newColor) {
 		color = newColor;
@@ -61,6 +55,7 @@ public class CarTester {
     // This is our main function where our code will run
     public static void main(String[] args) {
     	// This creates a new car object with the model "Truck"
+    	// and color "Blue"
     	Car myCar = new Car("Truck", "Blue");
 
     	// Store the color of the myCar object in a String called color
@@ -94,22 +89,32 @@ class Oop extends Component {
 					These objects are then used to communicate with each other to ultimately solve a problem.
 				</div>
 				<div className="content">
-					<div className="subtitle-left">What are classes and objects?</div>
+					<div className="subtitle-left">What makes up an object-oriented program?</div>
+					<div className="subsubtitle-left">Classes</div>
 					<div className="text-left">
-						<FaStar className="starIcon"/>
-						A class describes a set of objects with the same behavior, containing variables and methods common to all objects of that kind. 
-						<mark>A class is a template for objects.</mark>
+						A class describes a set of objects with the same behavior, containing variables and methods common to all objects of that kind. <mark>A class is a template for objects.</mark>
 					</div>
+					<div className="subsubtitle-left">Objects</div>
 					<div className="text-left">
+						An object is a program entity that the programmer can manipulate by calling methods of the objects class. <mark>An object is an instance of a class.</mark>
+					</div>
+					<div className="subsubtitle-left">Methods</div>
+					<div className="text-left">
+						A method is a set of code statements that performs a specific task. All methods can fall under the accessor or mutator category. <br/>
+						<br/>
 						<FaStar className="starIcon"/>
-						A object is a program entity that the programmer can manipulate by calling methods of the objects class. 
-						<mark> An object is an instance of a class.</mark>
+						<mark>Accessor methods</mark> do not change the internal data of the invoked object and retrieves the objects data. Accessor methods return 
+						a data type back to the caller which is why they are also called getter methods.<br/>
+
+						<FaStar className="starIcon"/>
+						<mark>Mutator methods</mark> change the internal data of the invoked object. Mutator methods use the <code>void</code> keyword to return 
+						nothing back to the caller which is why they are also called setter methods.
 					</div>
 					<Container fluid>
 						<Row>
 							<Col>
 								<Row style={{ justifyContent:"center" }}>
-									<div className="subsubtitle-center">Creating a car class</div>
+									<div className="subsubtitle-center">Creating an example car class</div>
 								</Row>
 								<Row>
 									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
@@ -155,7 +160,6 @@ class Oop extends Component {
 						the different types of cars such as truck, sedan, SUV, and van. Even though the types of cars are different, they are all cars 
 						and inherit some of the attributes of car.
 					</div>
-
 					<div className="subsubtitle-left">Polymorphism</div>
 					<div className="text-left">
 						The definition of polymorphism is the condition of occuring in different forms. In programming, polymorphism lets programmers
@@ -174,7 +178,6 @@ class Oop extends Component {
 						are <code>calculateArea()</code> methods for all the child classes such as <code>calculateArea(Shape triangle)</code>, <code>calculateArea(Shape circle)</code>, 
 						and <code>calculateArea(Shape square)</code>. By using the <code>calculateArea()</code> method with the input type corresponding to our desired 
 						shape, we can then calculate the area of that shape.
-
 					</div>
 					<div className="text-left">
 						<FaStar className="starIcon"/>

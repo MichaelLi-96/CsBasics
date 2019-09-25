@@ -56,8 +56,8 @@ class Header extends Component {
 						<Nav.Link eventKey="dataTypes" as={Link} to="/DataTypes">Data Types</Nav.Link>
 						<Nav.Link eventKey="dataStructures" as={Link} to="/DataStructures">Data Structures</Nav.Link>
 						<Nav.Link eventKey="algorithms" as={Link} to="/Algorithms">Algorithms</Nav.Link>
+						<Nav.Link eventKey="bigO" as={Link} to="/bigO">Big-O</Nav.Link>
 						<Nav.Link eventKey="sorting" as={Link} to="/Sorting">Sorting</Nav.Link>
-						<Nav.Link eventKey="searching" as={Link} to="/Searching">Searching</Nav.Link>
 					</Nav>
 				  </Navbar.Collapse>
 				</Navbar>

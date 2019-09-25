@@ -63,9 +63,15 @@
 	align-items: center;
 }
 
-.table-center {
+.table-center-margin {
 	margin-top: 50px;
 	margin-bottom: 50px;
+	text-align: center;
+	resize: both;
+	overflow: auto;
+}
+
+.table-center-no-margin {
 	text-align: center;
 	resize: both;
 	overflow: auto;
@@ -103,9 +109,7 @@
 	margin: 15px;
 }
 
-.img-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
+.image {
+    width: 100%;
+    height: auto;
 }
