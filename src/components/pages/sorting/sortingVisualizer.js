@@ -1,12 +1,13 @@
 export default function sketch (p) {
-	let numbers, columnWidth, columnHeight, sorter, millisecondsElapsed, lastSortedTime;
-	let arraySize, delay, startSort, constructNewArray;
+	let numbers, columnWidth, sorter, millisecondsElapsed, lastSortedTime;
+	let arraySize, delay, startSort, constructNewArray, sortType;
 
 	p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
 		arraySize = props.arraySize;
 		delay = props.delay;
 		startSort = props.startSort;
 		constructNewArray = props.constructNewArray;
+		sortType = props.sortType;
 	};
 
 	p.setup = function() {
