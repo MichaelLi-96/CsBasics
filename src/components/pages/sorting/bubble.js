@@ -49,7 +49,7 @@ class Bubble extends Component {
 				<div className="subtitle-left">
 					Code Implementation:
 				</div>
-				<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+				<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 					{bubbleSort}
 				</SyntaxHighlighter>
 			</div>

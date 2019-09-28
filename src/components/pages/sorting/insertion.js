@@ -52,7 +52,7 @@ class Insertion extends Component {
 				<div className="subtitle-left">
 					Code Implementation:
 				</div>
-				<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+				<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 					{insertionSort}
 				</SyntaxHighlighter>
 			</div>

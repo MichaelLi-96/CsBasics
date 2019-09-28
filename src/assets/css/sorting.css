@@ -36,3 +36,69 @@
 	font-weight: bold;
 	text-decoration: none;
 }
+
+.optionsContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.rowContainer-sides {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rowContainer-center {
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.colContainer {
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.btn-primary {
+	font-size: 24px;
+	background-color: #011E13;
+	border:none;
+}
+
+.btn-primary:hover {
+	background-color: #011E13;
+	color: #1ED761;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+	background-color: #1ED761;
+	font-weight: bold;
+	color: #011E13;
+}
+
+.rc-slider-track {
+	background-color: #1ED761;
+	height: 8px;
+}
+
+.rc-slider-handle {
+	height: 25px;
+	width: 25px;
+	margin-top: -8px;
+	border: solid 2px #011E13 !important;
+}
+
+.rc-slider-handle:hover {
+	border-color: none;
+}
+.rc-slider-handle:focus {
+	border-color: none;
+	box-shadow: none;
+}
+
+.rc-slider-rail {
+	height: 10px;
+}

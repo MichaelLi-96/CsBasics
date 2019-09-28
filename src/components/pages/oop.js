@@ -85,7 +85,7 @@ class Oop extends Component {
 	    	 <div className="flex-container">
 				<div className="title">Object-Oriented Programming</div>
 				<div className="text-center">
-					Object-oriented programming is a programming methodlogy of using objects to represent data and methods. <br/>
+					Object-oriented programming is a programming methodlogy of using objects to represent data and methods.
 					These objects are then used to communicate with each other to ultimately solve a problem.
 				</div>
 				<div className="content">
@@ -117,7 +117,7 @@ class Oop extends Component {
 									<div className="subsubtitle-center">Creating an example car class</div>
 								</Row>
 								<Row>
-									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-sm">
 										{classExample}
 									</SyntaxHighlighter>
 								</Row>
@@ -127,7 +127,7 @@ class Oop extends Component {
 									<div className="subsubtitle-center">Creating an car object using the car class</div>
 								</Row>
 								<Row>
-									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+									<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-sm">
 										{objectExample}
 									</SyntaxHighlighter>	
 								</Row>

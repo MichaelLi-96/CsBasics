@@ -30,7 +30,7 @@ class Sorting extends Component {
 	    	 <div className="flex-container">
 				<div className="title">Sorting</div>
 				<div className="text-center">
-					Sorting algorithms are used to rearrange the elements of an unordered array or list into the correct order. <br />
+					Sorting algorithms are used to rearrange the elements of an unordered array or list into the correct order.
 					Each kind of sorting algorithm is differentiated by their time and space complexities.
 				</div>
 				<Tab.Container defaultActiveKey="SelectionSort">
@@ -38,7 +38,7 @@ class Sorting extends Component {
 						<Col sm={2} />
 						<Col sm={8}>
 							<div id="anchor-name" style={{position: "absolute", top: -135}} />
-							<DropdownButton id="dropdown-item-button" flip={false} className="dropdownButton" title={this.state.sort}>
+							<DropdownButton id="dropdown-item-button" className="dropdownButton" title={this.state.sort}>
 						        <Dropdown.Item onClick={()=>this.setState({sort: "Selection Sort"})} eventKey="SelectionSort">Selection Sort</Dropdown.Item>
 						        <Dropdown.Divider />
 						        <Dropdown.Item onClick={()=>this.setState({sort: "Insertion Sort"})} eventKey="InsertionSort">Insertion Sort</Dropdown.Item>

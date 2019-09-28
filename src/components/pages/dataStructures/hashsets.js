@@ -59,7 +59,7 @@ class Hashmaps extends Component {
 					</ul>
 					<br />
 					To initialize a HashSet of strings, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{initalizeHashSet}
 					</SyntaxHighlighter>
 					<br />
@@ -67,7 +67,7 @@ class Hashmaps extends Component {
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add and remove HashSet elements:<br />
 					<br />
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{HashSetExample}
 					</SyntaxHighlighter>
 				</div>

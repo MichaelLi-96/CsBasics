@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Spinner from 'react-bootstrap/Spinner'
 import "../../assets/css/pages.css";
 import "../../assets/css/home.css"
 
@@ -35,7 +36,7 @@ class Home extends Component {
 	    		
     			{this.state.loading || this.state.quote === "" ? (
     				<div id="quote-container">
-    						<div id="daily-quote-quote">loading...</div>
+    						<Spinner animation="border" style={{ color: "#011E13" }} />
     				</div>
     			) : (
     				<div id="quote-container">

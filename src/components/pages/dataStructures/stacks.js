@@ -49,14 +49,14 @@ class Stacks extends Component {
 					plate off the stack.<br />
 					<br />
 					To initialize a stack of Integers, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{initalizeStack}
 					</SyntaxHighlighter>
 					<br />
 					Stacks already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add and remove stack elements:  
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{stackExample}
 					</SyntaxHighlighter>
 

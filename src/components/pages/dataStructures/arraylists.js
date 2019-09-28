@@ -49,14 +49,14 @@ class Arraylists extends Component {
 					<br/ >
 					<br />
 					To initialize an ArrayList of Integers, you write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{initializeArrayList}
 					</SyntaxHighlighter>
 					<br />
 					ArrayLists already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add, retrieve, and remove ArrayList elements:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{example}
 					</SyntaxHighlighter>
 				</div>

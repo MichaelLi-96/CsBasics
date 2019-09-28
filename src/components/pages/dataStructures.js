@@ -36,7 +36,7 @@ class DataStructures extends Component {
 		    <div className="flex-container">
 				<div className="title">Data Structures</div>
 				<div className="text-center">
-					A data structure is a way of collecting and organising data in such a way that we can perform operations on these data in an effective way. <br />
+					A data structure is a way of collecting and organising data in such a way that we can perform operations on these data in an effective way.
 					Using the right data structure in different situations and constraints can save a computer time and space!
 				</div>
 				<div id="tab-container">

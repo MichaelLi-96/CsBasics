@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import { Row, Col, Button } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import Tooltip from 'rc-tooltip';
+import Slider from 'rc-slider';
+import P5Wrapper from "react-p5-wrapper";
+import selectionSortVisualizer from "./visualizationSketches/selection";
+import 'rc-slider/assets/index.css';
+import 'rc-tooltip/assets/bootstrap.css';
 import "../../../assets/css/pages.css";
-import "../../../assets/css/dataStructures.css";
+import "../../../assets/css/sorting.css";
 
 const selectionSort =
 `public static void selectionSort(int[] arr){  
@@ -23,13 +30,78 @@ const selectionSort =
 	}  
 }`
 
+const Handle = Slider.Handle;
+
+const handle = (props) => {
+	const { value, dragging, index, ...restProps } = props;
+	return (
+		<Tooltip
+			prefixCls="rc-slider-tooltip"
+			overlay={value}
+			visible={dragging}
+			placement="top"
+			key={index}
+		>
+			<Handle value={value} {...restProps} />
+		</Tooltip>
+	);
+};
+
 class Selection extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			arraySize: 10,
+			delay: 100,
+			startSort: false,
+			constructNewArray: false
+		}
+	}
+
   	render() {
 		return(
 			<div className="content">
 				<div className="subtitle-left">
 					Visualizer:
 				</div>
+				<Row>
+					<Col sm={8} id="visualizer">
+						<P5Wrapper 
+							sketch={selectionSortVisualizer} 
+							arraySize={this.state.arraySize}
+							delay={this.state.delay}
+							startSort={this.state.startSort}
+							constructNewArray={this.state.constructNewArray}
+						/>
+					</Col>
+					<Col sm={4} className="optionsContainer">
+						<Row className="rowContainer-sides">
+							<Button onClick={()=>this.setState({startSort: true, constructNewArray: false})}>Start Sort!</Button>
+							<Button onClick={()=>this.setState({constructNewArray: true, startSort: false})}>Reset and Randomize</Button>
+						</Row>
+						<Row />
+						<Row className="rowContainer-left" style={{ fontSize: 30, fontWeight: "bold" }}>Array Size</Row>
+						<Row className="rowContainer-center">
+							<Col sm={9} xs={9} className="colContainer">
+								<Slider min={10} max={50} defaultValue={10} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
+							</Col>
+							<Col sm={3} xs={3} className="colContainer" style={{ fontSize: 30, fontWeight: "bold" }}>
+								{this.state.arraySize}
+							</Col>
+						</Row>
+						<Row />
+						<Row className="rowContainer-left" style={{ fontSize: 30, fontWeight: "bold"}}>Delay in Milliseconds</Row>
+						<Row className="rowContainer-center">
+							<Col sm={9} xs={9} className="colContainer">
+								<Slider min={0} max={1000} defaultValue={100} handle={handle} onChange={value=>this.setState({delay: value, constructNewArray: false})}   />
+							</Col>
+							<Col sm={3} xs={3} className="colContainer" style={{ fontSize: 30, fontWeight: "bold" }}>
+								{this.state.delay}
+							</Col>
+						</Row>
+					</Col>
+				</Row>
+				<br />
 				<div className="subtitle-left">
 					Time Complexity:
 				</div>
@@ -54,7 +126,7 @@ class Selection extends Component {
 				<div className="subtitle-left">
 					Code Implementation:
 				</div>
-				<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+				<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 					{selectionSort}
 				</SyntaxHighlighter>
 			</div>
