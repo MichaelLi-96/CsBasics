@@ -13,14 +13,14 @@ import "../../../assets/css/dataStructures.css";
 
 const bubbleSort = 
 `public static void bubbleSort(int[] arr) { 
-	for (int i = 0; i < arr.length-1; i++) {
+	for (int i = 0; i < arr.length - 1; i++) {
 		// Iterating through the array
-		for (int j = 0; j < arr.length-i-1; j++) 
+		for (int j = 0; j < arr.length - i - 1; j++) {
 			// If the adjacent elements are not in order, swap them
-			if (arr[j] > arr[j+1]) { 
+			if (arr[j] > arr[j + 1]) { 
 				int temp = arr[j]; 
-				arr[j] = arr[j+1]; 
-				arr[j+1] = temp; 
+				arr[j] = arr[j + 1]; 
+				arr[j + 1] = temp; 
 		}
 	} 
 }` 
@@ -44,19 +44,30 @@ const handle = (props) => {
 
 
 class Bubble extends Component {
-	componentWillReceiveProps(newProps) {
-    	this.setState({sortType: newProps.sortType});
-	}
-
 	constructor(props) {
 		super(props);
 		this.state = {
-			sortType: "SelectionSort",
-			arraySize: 10,
+			sortType: "Selection Sort",
+			arraySize: 20,
 			delay: 100,
 			startSort: false,
 			constructNewArray: false
 		}
+	}
+
+	componentWillReceiveProps(newProps) {
+    	this.setState({sortType: newProps.sortType});
+	}
+
+	componentDidUpdate(previousProps, previousState) {
+	    if (previousState.sortType !== this.state.sortType) {
+	        this.setState({
+		        arraySize: 20,
+				delay: 100,
+				startSort: false,
+				constructNewArray: false
+			})
+	    }
 	}
 
   	render() {
@@ -65,7 +76,7 @@ class Bubble extends Component {
 				<div className="subtitle-left">
 					Visualizer:
 				</div>
-				{ this.state.sortType === "BubbleSort" ?
+				{ this.state.sortType === "Bubble Sort" ?
 					<Row>
 						<Col sm={8} id="visualizer">
 							<P5Wrapper 
@@ -86,7 +97,7 @@ class Bubble extends Component {
 							<Row className="rowContainer-left" style={{ fontSize: 30, fontWeight: "bold" }}>Array Size</Row>
 							<Row className="rowContainer-center">
 								<Col sm={9} xs={9} className="colContainer">
-									<Slider min={10} max={50} defaultValue={10} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
+									<Slider min={10} max={50} defaultValue={20} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
 								</Col>
 								<Col sm={3} xs={3} className="colContainer" style={{ fontSize: 30, fontWeight: "bold" }}>
 									{this.state.arraySize}
@@ -127,7 +138,7 @@ class Bubble extends Component {
 				<div className="text-left">
 					The bubble sort algorithm sorts an array or list by repeatedly swapping adjacent elements if the two elements are in the wrong order. We will iterate
 					through the whole array n times where n will be the length of the array. After each iteration, we can see that the element in the 
-					(length of the array - current number of iterations)th index will be in sorted order.  
+					(length of the array - current number of iterations)th index will be placed in sorted order.  
 				</div>
 				<div className="subtitle-left">
 					Code Implementation:

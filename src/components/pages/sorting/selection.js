@@ -48,20 +48,30 @@ const handle = (props) => {
 };
 
 class Selection extends Component {
-
-	componentWillReceiveProps(newProps) {
-    	this.setState({sortType: newProps.sortType});
-	}
-
 	constructor(props) {
 		super(props);
 		this.state = {
-			sortType: "SelectionSort",
-			arraySize: 10,
+			sortType: "Selection Sort",
+			arraySize: 20,
 			delay: 100,
 			startSort: false,
-			constructNewArray: false
+			constructNewArray: false,
 		}
+	}
+
+	componentDidUpdate(previousProps, previousState) {
+	    if (previousState.sortType !== this.state.sortType) {
+	        this.setState({
+		        arraySize: 20,
+				delay: 100,
+				startSort: false,
+				constructNewArray: false
+			})
+	    }
+	}
+
+	componentWillReceiveProps(newProps) {
+    	this.setState({sortType: newProps.sortType});
 	}
 
   	render() {
@@ -70,7 +80,7 @@ class Selection extends Component {
 				<div className="subtitle-left">
 					Visualizer:
 				</div>
-				{ this.state.sortType === "SelectionSort" ?
+				{ this.state.sortType === "Selection Sort" ?
 					<Row>
 						<Col sm={8} id="visualizer">
 							<P5Wrapper 
@@ -91,7 +101,7 @@ class Selection extends Component {
 							<Row className="rowContainer-left" style={{ fontSize: 30, fontWeight: "bold" }}>Array Size</Row>
 							<Row className="rowContainer-center">
 								<Col sm={9} xs={9} className="colContainer">
-									<Slider min={10} max={50} defaultValue={10} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
+									<Slider min={10} max={50} defaultValue={20} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
 								</Col>
 								<Col sm={3} xs={3} className="colContainer" style={{ fontSize: 30, fontWeight: "bold" }}>
 									{this.state.arraySize}

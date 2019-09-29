@@ -45,19 +45,30 @@ const handle = (props) => {
 };
 
 class Insertion extends Component {
-	componentWillReceiveProps(newProps) {
-    	this.setState({sortType: newProps.sortType});
-	}
-
 	constructor(props) {
 		super(props);
 		this.state = {
-			sortType: "SelectionSort",
-			arraySize: 10,
+			sortType: "Selection Sort",
+			arraySize: 20,
 			delay: 100,
 			startSort: false,
 			constructNewArray: false
 		}
+	}
+
+	componentWillReceiveProps(newProps) {
+    	this.setState({sortType: newProps.sortType});
+	}
+
+	componentDidUpdate(previousProps, previousState) {
+	    if (previousState.sortType !== this.state.sortType) {
+	        this.setState({
+		        arraySize: 20,
+				delay: 100,
+				startSort: false,
+				constructNewArray: false
+			})
+	    }
 	}
 
   	render() {
@@ -66,7 +77,7 @@ class Insertion extends Component {
 				<div className="subtitle-left">
 					Visualizer:
 				</div>
-				{ this.state.sortType === "InsertionSort" ?
+				{ this.state.sortType === "Insertion Sort" ?
 					<Row>
 						<Col sm={8} id="visualizer">
 							<P5Wrapper 
@@ -87,7 +98,7 @@ class Insertion extends Component {
 							<Row className="rowContainer-left" style={{ fontSize: 30, fontWeight: "bold" }}>Array Size</Row>
 							<Row className="rowContainer-center">
 								<Col sm={9} xs={9} className="colContainer">
-									<Slider min={10} max={50} defaultValue={10} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
+									<Slider min={10} max={50} defaultValue={20} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
 								</Col>
 								<Col sm={3} xs={3} className="colContainer" style={{ fontSize: 30, fontWeight: "bold" }}>
 									{this.state.arraySize}
@@ -127,8 +138,8 @@ class Insertion extends Component {
 				</div>
 				<div className="text-left">
 					The insertion sort algorithm sorts an array or list by maintaining a sorted and unsorted subsection. As we iterate through an array or list, 
-					the current element is moved from the unsorted subsection into the sorted subsection. We then iterate through the sorted subsection starting from 
-					the end until we find the position where the current element will be ordered. We push greater value elements by one index to make room at the same time. 
+					the current element we are on is moved from the unsorted subsection into the sorted subsection. We then iterate through the sorted subsection starting from 
+					the end until we find the position where the current element will be ordered. We also push greater value elements by one index to make room at the same time. 
 					Insertion sort is similar to the way where we sort playing cards in our hands.
 				</div>
 				<div className="subtitle-left">

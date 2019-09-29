@@ -14,12 +14,12 @@ import "../../../assets/css/dataStructures.css";
 const heapSort =
 `public static void heapSort(int arr[]) { 
 	// Build heap (rearrange array) 
-	for (int i = arr.length / 2 - 1; i >= 0; i--) {
+	for (int i = Math.floor(arr.length / 2) - 1; i >= 0; i--) {
 		heapify(arr, arr.length, i); 
 	}
 
 	// One by one extract an element from heap 
-	for (int i= arr.length-1; i>=0; i--) { 
+	for (int i = arr.length - 1; i >= 0; i--) { 
 		// Move current root or maximum value element to end of the array
 		// Move the last heap element to the root position index 0
 		int temp = arr[0]; 
@@ -78,19 +78,30 @@ const handle = (props) => {
 
 
 class Heap extends Component {
-	componentWillReceiveProps(newProps) {
-    	this.setState({sortType: newProps.sortType});
-	}
-
 	constructor(props) {
 		super(props);
 		this.state = {
-			sortType: "SelectionSort",
-			arraySize: 10,
+			sortType: "Selection Sort",
+			arraySize: 20,
 			delay: 100,
 			startSort: false,
 			constructNewArray: false
 		}
+	}
+
+	componentWillReceiveProps(newProps) {
+    	this.setState({sortType: newProps.sortType});
+	}
+
+	componentDidUpdate(previousProps, previousState) {
+	    if (previousState.sortType !== this.state.sortType) {
+	        this.setState({
+		        arraySize: 20,
+				delay: 100,
+				startSort: false,
+				constructNewArray: false
+			})
+	    }
 	}
 
   	render() {
@@ -99,7 +110,7 @@ class Heap extends Component {
 				<div className="subtitle-left">
 					Visualizer:
 				</div>
-				{ this.state.sortType === "HeapSort" ?
+				{ this.state.sortType === "Heap Sort" ?
 					<Row>
 						<Col sm={8} id="visualizer">
 							<P5Wrapper 
@@ -120,7 +131,7 @@ class Heap extends Component {
 							<Row className="rowContainer-left" style={{ fontSize: 30, fontWeight: "bold" }}>Array Size</Row>
 							<Row className="rowContainer-center">
 								<Col sm={9} xs={9} className="colContainer">
-									<Slider min={10} max={50} defaultValue={10} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
+									<Slider min={10} max={50} defaultValue={20} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
 								</Col>
 								<Col sm={3} xs={3} className="colContainer" style={{ fontSize: 30, fontWeight: "bold" }}>
 									{this.state.arraySize}
@@ -161,7 +172,8 @@ class Heap extends Component {
 				<div className="text-left">
 					The heap sort algorithm sorts an array or list by using a max or min heap. For example, by using a max heap we always have access to the maximum
 					value element. Heapsort removes the maximum value element which is the root node and places it at the end of the array. After the removal, the last 
-					element of the heap is moved to the root node position and is then bubbled down (heapified) to the right position to maintain the max heap property.
+					element of the heap is moved to the root node position and is then bubbled down (heapified) to the correct position to maintain the max heap property.
+					This continues until the size of the heap is only one, which will be the lowest value of the array.
 				</div>
 				<div className="subtitle-left">
 					Code Implementation:

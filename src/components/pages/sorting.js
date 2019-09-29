@@ -13,7 +13,7 @@ class Sorting extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			sort: "SelectionSort",
+			sort: "Selection Sort",
 		}
 	}
 
@@ -26,7 +26,6 @@ class Sorting extends Component {
 	}
 	
 	 render() {
-	 	//console.log(this.state.sort);
 	    return(
 	    	 <div className="flex-container">
 				<div className="title">Sorting</div>
@@ -40,17 +39,17 @@ class Sorting extends Component {
 						<Col sm={8}>
 							<div id="anchor-name" style={{position: "absolute", top: -135}} />
 							<DropdownButton id="dropdown-item-button" className="dropdownButton" title={this.state.sort}>
-						        <Dropdown.Item onClick={()=>this.setState({sort: "SelectionSort"})} eventKey="SelectionSort">Selection Sort</Dropdown.Item>
+						        <Dropdown.Item onClick={()=>this.setState({sort: "Selection Sort"})} eventKey="SelectionSort">Selection Sort</Dropdown.Item>
 						        <Dropdown.Divider />
-						        <Dropdown.Item onClick={()=>this.setState({sort: "InsertionSort"})} eventKey="InsertionSort">Insertion Sort</Dropdown.Item>
+						        <Dropdown.Item onClick={()=>this.setState({sort: "Insertion Sort"})} eventKey="InsertionSort">Insertion Sort</Dropdown.Item>
 						        <Dropdown.Divider />
-						        <Dropdown.Item onClick={()=>this.setState({sort: "BubbleSort"})} eventKey="BubbleSort">Bubble Sort</Dropdown.Item>
+						        <Dropdown.Item onClick={()=>this.setState({sort: "Bubble Sort"})} eventKey="BubbleSort">Bubble Sort</Dropdown.Item>
 						        <Dropdown.Divider />
-						        <Dropdown.Item onClick={()=>this.setState({sort: "HeapSort"})} eventKey="HeapSort">Heap Sort</Dropdown.Item>
+						        <Dropdown.Item onClick={()=>this.setState({sort: "Heap Sort"})} eventKey="HeapSort">Heap Sort</Dropdown.Item>
 						        <Dropdown.Divider />
-						        <Dropdown.Item onClick={()=>this.setState({sort: "MergeSort"})} eventKey="MergeSort">Merge Sort</Dropdown.Item>
+						        <Dropdown.Item onClick={()=>this.setState({sort: "Merge Sort"})} eventKey="MergeSort">Merge Sort</Dropdown.Item>
 						        <Dropdown.Divider />
-						        <Dropdown.Item onClick={()=>this.setState({sort: "QuickSort"})} eventKey="QuickSort">Quick Sort</Dropdown.Item>
+						        <Dropdown.Item onClick={()=>this.setState({sort: "Quick Sort"})} eventKey="QuickSort">Quick Sort</Dropdown.Item>
 						    </DropdownButton>
 						</Col>
 						<Col sm={2} />
