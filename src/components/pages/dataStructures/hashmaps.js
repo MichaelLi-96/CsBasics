@@ -60,7 +60,7 @@ class Hashmaps extends Component {
 					</ul>
 					<br />
 					To initialize a HashMap of Strings mapping to Integers, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{initalizeHashMap}
 					</SyntaxHighlighter>
 					<br />
@@ -68,7 +68,7 @@ class Hashmaps extends Component {
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add, retrieve, and remove HashMap elements:<br />
 					<br />
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{HashMapExample}
 					</SyntaxHighlighter>
 				</div>

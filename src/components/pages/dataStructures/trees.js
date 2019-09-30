@@ -51,7 +51,7 @@ class Trees extends Component {
 					node.<br />
 					<br />
 					Here is an example node class for a tree where each node is holding an int value and can have multiple children:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{treeNodeClass}
 					</SyntaxHighlighter>
 					<br />
@@ -69,7 +69,7 @@ class Trees extends Component {
 					<div className="subsubtitle-left">Binary Trees</div>
 					A binary tree is a tree where each node can have <mark>at most two children (0-2)</mark>. We usually name the two children the left and right nodes. Below is 
 					an example node class for a binary tree:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{binaryTreeNodeClass}
 					</SyntaxHighlighter>
 					<br />

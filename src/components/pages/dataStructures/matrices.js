@@ -31,13 +31,13 @@ class Matrices extends Component {
 					<br />
 					When you construct a matrix, you have to specify that the array has more than one dimension by adding more than one size parameter in brackets.
 					To initialize a 2-dimensional array with 4 rows and 6 columns, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						{initalizeMatrix}
 					</SyntaxHighlighter>
 					<br />
 					Similarly to arrays, indexes are required to access a specific element from a 2-dimensional array. To retrieve the element in the row 2 
 					and column 4, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text">
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
 						int number = myTwoDimArray[2][4];
 					</SyntaxHighlighter>
 					<br />
