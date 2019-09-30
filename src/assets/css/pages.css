@@ -193,12 +193,12 @@ td {
 	}
 
 	th {
-		font-size: 22.5px;
+		font-size: 18px;
 		font-weight: bold;
 		
 	}
 	td {
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: normal;
 	}
 
@@ -209,7 +209,7 @@ td {
 
 	.code-text-sm {
 		width:100%;
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: normal;
 		color: black;
 		text-align: left;
@@ -218,7 +218,7 @@ td {
 
 	.code-text-lg {
 		width:100%;
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: normal;
 		color: black;
 		text-align: left;

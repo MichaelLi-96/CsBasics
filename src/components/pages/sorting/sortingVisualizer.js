@@ -17,7 +17,7 @@ export default function sketch (p) {
 			p.resizeCanvas(window.innerWidth * 0.55, window.innerHeight * 0.55);
 		}
 		else {
-			p.resizeCanvas(window.innerWidth * 0.9, window.innerHeight * 0.9);
+			p.resizeCanvas(window.innerWidth * 0.9, window.innerHeight * 0.4);
 		}
 		numbers = Array(20).fill().map(() => p.random(1));
 		selectionSorter = p.selectionSort();
@@ -86,7 +86,7 @@ export default function sketch (p) {
 			columnWidth = window.innerWidth * 0.55 / numbers.length;
 		}
 		else {
-			p.resizeCanvas(window.innerWidth * 0.9, window.innerHeight * 0.9);
+			p.resizeCanvas(window.innerWidth * 0.9, window.innerHeight * 0.4);
 			columnWidth = window.innerWidth * 0.9 / numbers.length;
 		}
 		p.background("#011E13");

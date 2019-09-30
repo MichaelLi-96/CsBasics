@@ -82,7 +82,11 @@ class DataStructures extends Component {
 						    <Col sm={1} />
 					    	<Col sm={8}>
 					      		<Tab.Content id="info"> 
-					      			<div id="anchor-name" style={{position: "absolute", top: -150, left: 0}} />
+					      			{ window.innerWidth >= 550 ?
+										<div id="anchor-name" style={{position: "absolute", top: -150, left: 0}} />
+										:
+										<div id="anchor-name" style={{position: "absolute", top: -95, left: 0}} />
+					      			}
 					        		<Tab.Pane eventKey="arrays">
 					        			<Arrays />
 					        		</Tab.Pane>
