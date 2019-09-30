@@ -18,7 +18,7 @@
 }
 
 .title {
-	font-size: 50px;
+	font-size: 55px;
 	font-weight: bold;
 	text-align: center;
 	margin-top: 20px;
@@ -26,7 +26,7 @@
 }
 
 .subtitle-left {
-	font-size: 35px;
+	font-size: 40px;
 	font-weight: bold;
 	text-align: left;
 	margin-top: 10px;
@@ -34,7 +34,7 @@
 }
 
 .subtitle-center {
-	font-size: 35px;
+	font-size: 40px;
 	font-weight: bold;
 	text-align: center;
 	margin-top: 10px;
@@ -42,7 +42,7 @@
 }
 
 .subsubtitle-center {
-	font-size: 30px;
+	font-size: 35px;
 	font-weight: bold;
 	text-align: center;
 	margin-top: 10px;
@@ -50,11 +50,29 @@
 }
 
 .subsubtitle-left {
-	font-size: 30px;
+	font-size: 35px;
 	font-weight: bold;
 	text-align: left;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.text-center {
+	font-size: 30px;
+	font-weight: normal;
+	color: black;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.text-left {
+	font-size: 30px;
+	font-weight: normal;
+	color: black;
+	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 30px;
 }
 
 .content {
@@ -63,6 +81,12 @@
 	align-items: center;
 }
 
+th {
+	font-size: 25px !important;
+}
+td {
+	font-size: 25px !important;
+}
 .table-center-margin {
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -77,24 +101,6 @@
 	overflow: auto;
 }
 
-.text-center {
-	font-size: 25px;
-	font-weight: normal;
-	color: black;
-	text-align: center;
-	margin-top: 15px;
-	margin-bottom: 30px;
-}
-
-.text-left {
-	font-size: 25px;
-	font-weight: normal;
-	color: black;
-	text-align: left;
-	margin-top: 15px;
-	margin-bottom: 30px;
-}
-
 .starIcon {
 	margin-right: 10px;
 	margin-bottom: 10px;
@@ -102,7 +108,7 @@
 
 .code-text-sm {
 	width:100%;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: normal;
 	color: black;
 	text-align: left;

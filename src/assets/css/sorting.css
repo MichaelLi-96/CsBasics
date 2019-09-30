@@ -1,6 +1,6 @@
 #dropdown-item-button {
 	width: 100%;
-	font-size: 35px;
+	font-size: 40px;
 	background-color: #011E13;
 	color: #1ED761;
 	margin-bottom: 30px;
@@ -12,7 +12,7 @@
 	z-index: 2;
 	-webkit-transform: none !important;
 	transform: none !important;
-	margin-top: 67px;
+	margin-top: 65px;
 }
 
 .btn-primary {
@@ -30,7 +30,7 @@
 .dropdown-item {
 	text-align: center;
 	color: white;
-	font-size: 30px;
+	font-size: 35px;
 }
 
 .dropdown-item:hover {
@@ -73,7 +73,7 @@
 }
 
 .btn-primary {
-	font-size: 24px;
+	font-size: 30px;
 	background-color: #011E13;
 	border:none;
 }
@@ -93,13 +93,13 @@
 
 .rc-slider-track {
 	background-color: #1ED761;
-	height: 8px;
+	height: 12px;
 }
 
 .rc-slider-handle {
-	height: 25px;
-	width: 25px;
-	margin-top: -8px;
+	height: 35px;
+	width: 35px;
+	margin-top: -11px;
 	border: solid 2px #011E13 !important;
 }
 
@@ -112,5 +112,11 @@
 }
 
 .rc-slider-rail {
-	height: 10px;
+	height: 14px;
+}
+
+.valueText {
+	text-align: center !important;
+	font-size: 35px;
+	font-weight: bold;
 }
