@@ -1,6 +1,6 @@
 export default function sketch (p) {
 	let numbers, columnWidth, millisecondsElapsed, lastSortedTime;
-	let arraySize, delay, startSort, constructNewArray, sortType;
+	let arraySize, delay, startSort, constructNewArray, sortType, currentIndex;
 	let selectionSorter, insertionSorter, bubbleSorter, heapSorter, mergeSorter, quickSorter;
 
 	p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
@@ -20,7 +20,7 @@ export default function sketch (p) {
 		bubbleSorter = p.bubbleSort();
 		heapSorter = p.heapSort();
 		mergeSorter = p.mergeSort(numbers, 0, numbers.length - 1);
-		quickSorter = p.quickSort();
+		quickSorter = p.quickSort(numbers, 0, numbers.length - 1);
 		lastSortedTime = p.millis();
 		p.fill("white");
 	}
@@ -45,7 +45,7 @@ export default function sketch (p) {
 				mergeSorter = p.mergeSort(numbers, 0, numbers.length - 1);
 			}
 			else if(sortType === "Quick Sort") {
-				quickSorter = p.quickSort();
+				quickSorter = p.quickSort(numbers, 0, numbers.length - 1);
 			}
 		}
 	}
@@ -82,7 +82,13 @@ export default function sketch (p) {
 		millisecondsElapsed = p.millis();
 		for (let i = 0; i < numbers.length; i++) {
 			let height = p.map(numbers[i], 0, 1, 0, p.height);
+			if(i === currentIndex) {
+				p.fill("#1ED761");
+			}
 			p.rect(i * columnWidth, p.height, columnWidth, -height);
+			if(i === currentIndex) {
+				p.fill("white");
+			}
 		}
 
 		p.constructNewArray();
@@ -96,11 +102,14 @@ export default function sketch (p) {
 				if (numbers[j] < numbers[minValueIndex]){  
 					minValueIndex = j;
 				}
+				currentIndex = j;
+				yield;
 			}  
 
 			let temp = numbers[minValueIndex];   
 			numbers[minValueIndex] = numbers[i];  
 			numbers[i] = temp;  
+			currentIndex = i;
 			yield;
 		}  
 		startSort = false;
@@ -113,10 +122,12 @@ export default function sketch (p) {
 	        while (j >= 0 && numbers[j] > currentElementVal) { 
 	            numbers[j + 1] = numbers[j]; 
 	            j = j - 1; 
+	            currentIndex = j;
 	            yield;
 	        } 
 
 	        numbers[j + 1] = currentElementVal;
+	        currentIndex = j + 1;
 	        yield;	        
 	    } 
 		startSort = false;
@@ -129,7 +140,10 @@ export default function sketch (p) {
 					let temp = numbers[j]; 
 					numbers[j] = numbers[j + 1]; 
 					numbers[j + 1] = temp; 
+					currentIndex = j + 1;
+					yield;
 				}
+				currentIndex = j;
 				yield;
 			} 
 		}
@@ -146,8 +160,9 @@ export default function sketch (p) {
 			let temp = numbers[0]; 
 			numbers[0] = numbers[i]; 
 			numbers[i] = temp; 
-
+			currentIndex = i;
 			yield;
+
 			p.heapify(numbers, i, 0); 
 			yield;
 		} 
@@ -173,19 +188,20 @@ export default function sketch (p) {
 			arr[largestIndex] = temp; 
 
 			p.heapify(arr, n, largestIndex); 
+			currentIndex = i;
 		} 
 	}
 
 	p.mergeSort = function*(arr, left, right) {
-		yield* p.sort(arr, left, right);
+		yield* p.mSort(arr, left, right);
 		startSort = false;
 	}
 
-	p.sort = function*(arr, left, right) {
+	p.mSort = function*(arr, left, right) {
 		if (left < right) { 
 			let mid = Math.floor(left + (right - left) / 2); 
-			yield* p.sort(arr, left, mid); 
-			yield* p.sort(arr , mid + 1, right); 
+			yield* p.mSort(arr, left, mid); 
+			yield* p.mSort(arr , mid + 1, right); 
 			yield* p.merge(arr, left, mid, right);
 		} 
 	}
@@ -218,6 +234,7 @@ export default function sketch (p) {
 				arr[arrIndex] = rightSubarray[rightPointer]; 
 				rightPointer++; 
 			} 
+			currentIndex = arrIndex;
 			arrIndex++;
 			yield;
 		} 
@@ -225,6 +242,7 @@ export default function sketch (p) {
 		while (leftPointer < leftSubarrayLength) { 
 			arr[arrIndex] = leftSubarray[leftPointer]; 
 			leftPointer++; 
+			currentIndex = arrIndex;
 			arrIndex++; 
 			yield;
 		} 
@@ -232,23 +250,55 @@ export default function sketch (p) {
 		while (rightPointer < rightSubarrayLength) { 
 			arr[arrIndex] = rightSubarray[rightPointer]; 
 			rightPointer++; 
+			currentIndex = arrIndex;
 			arrIndex++; 
 			yield;
 		} 
 	}
 
-	p.quickSort = function*() {
-		for (let i = numbers.length - 1; i > 0; i--) {
-			for (let j = 0; j < i; j++) {
-				if (numbers[j] > numbers[j + 1]) {
-					// swap
-					let t = numbers[j];
-					numbers[j] = numbers[j + 1];
-					numbers[j + 1] = t;
-				}
-				yield;
-			}
-		}
+	p.quickSort = function*(arr, start, end) {
+		yield* p.qSort(arr, start, end);
 		startSort = false;
+	}
+
+	p.qSort = function*(arr, start, end) {
+		let generator = p.partition(arr, start, end);
+		let generatorNext = generator.next();
+		while(!generatorNext.done) {
+			yield generator;
+			generatorNext = generator.next();
+		}
+		let partition = generatorNext.value;
+
+		if(partition - 1 > start) {
+			yield* p.qSort(arr, start, partition - 1);
+		}
+
+		if(partition + 1 < end) {
+			yield* p.qSort(arr, partition, end);
+		}
+	}
+
+	p.partition = function*(arr, start, end) {
+		let pivot = arr[end];
+		
+		for(let i = start; i < end; i++){
+			if(arr[i] < pivot){
+				let temp = arr[start];
+				arr[start] = arr[i];
+				arr[i] = temp;
+				start++;
+			}
+			currentIndex = i;
+			yield;
+			
+		}
+		let temp = arr[start];
+		arr[start] = pivot;
+		arr[end] = temp;
+		currentIndex = end;
+		yield;
+
+		return start;
 	}
 };

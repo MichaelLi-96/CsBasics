@@ -22,7 +22,7 @@ public static void quickSort(int[] arr, int start, int end) {
 		quickSort(arr, start, partition - 1);
 	}
 	// Sort the greater/right partition
-	if(partition + 1 <end) {
+	if(partition + 1 < end) {
 		quickSort(arr, partition + 1, end);
 	}
 }
@@ -122,7 +122,7 @@ class Quick extends Component {
 							<Row className="rowContainer-left" style={{ fontSize: 30, fontWeight: "bold" }}>Array Size</Row>
 							<Row className="rowContainer-center">
 								<Col sm={9} xs={9} className="colContainer">
-									<Slider min={10} max={50} defaultValue={20} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
+									<Slider min={10} max={100} defaultValue={20} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
 								</Col>
 								<Col sm={3} xs={3} className="colContainer" style={{ fontSize: 30, fontWeight: "bold" }}>
 									{this.state.arraySize}
