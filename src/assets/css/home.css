@@ -38,6 +38,12 @@
 }
 
 @media (max-width: 900px) {
+	#welcome-banner {
+		margin-top: -33px;
+		background-image: url("../images/welcome.jpg");
+		min-height: 400px;
+		text-align: center;
+	}
 	 #welcome-banner-title {
 		color: #011E13;
 		font-size: 70px;

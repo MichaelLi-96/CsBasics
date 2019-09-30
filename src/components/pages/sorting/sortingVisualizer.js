@@ -22,7 +22,7 @@ export default function sketch (p) {
 		mergeSorter = p.mergeSort(numbers, 0, numbers.length - 1);
 		quickSorter = p.quickSort(numbers, 0, numbers.length - 1);
 		lastSortedTime = p.millis();
-		p.strokeWeight(5);
+		p.strokeWeight(2);
 		p.fill("white");
 	}
 

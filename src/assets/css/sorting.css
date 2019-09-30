@@ -56,20 +56,26 @@
 }
 
 .rowContainer-sides {
+	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .rowContainer-center {
+	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 25px;
 }
 
 .colContainer {
-	justify-content: flex-end;
-	align-items: center;
+	display: flex;
+	justify-content: center;
+    align-items: center;
 }
 
 .btn-primary {
@@ -151,7 +157,7 @@
 		background-color: #011E13;
 		border:none;
 	}
-	
+
 	.rc-slider-handle {
 		height: 30px;
 		width: 30px;

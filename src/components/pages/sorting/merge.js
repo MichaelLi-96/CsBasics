@@ -134,7 +134,7 @@ class Merge extends Component {
 				</div>
 				{ this.state.sortType === "Merge Sort" ?
 					<Row>
-						<Col sm={8} id="visualizer">
+						<Col sm={8} className="colContainer">
 							<P5Wrapper 
 								sketch={sortingVisualizer}
 								arraySize={this.state.arraySize}
@@ -149,7 +149,6 @@ class Merge extends Component {
 								<Button onClick={()=>this.setState({startSort: true, constructNewArray: false})}>Start Sort!</Button>
 								<Button onClick={()=>this.setState({constructNewArray: true, startSort: false})}>Reset and Randomize</Button>
 							</Row>
-							<Row />
 							<Row className="rowContainer-left, subsubtitle-left">Array Size</Row>
 							<Row className="rowContainer-center">
 								<Col sm={10} xs={10} className="colContainer">
@@ -159,7 +158,6 @@ class Merge extends Component {
 									{this.state.arraySize}
 								</Col>
 							</Row>
-							<Row />
 							<Row className="rowContainer-left, subsubtitle-left">Delay in Milliseconds</Row>
 							<Row className="rowContainer-center">
 								<Col sm={10} xs={10} className="colContainer">
