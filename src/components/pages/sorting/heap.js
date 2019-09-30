@@ -127,21 +127,21 @@ class Heap extends Component {
 								<Button onClick={()=>this.setState({startSort: true, constructNewArray: false})}>Start Sort!</Button>
 								<Button onClick={()=>this.setState({constructNewArray: true, startSort: false})}>Reset and Randomize</Button>
 							</Row>
-							<Row className="rowContainer-left, subsubtitle-left">Array Size</Row>
+							<Row className="sliderTitle subsubtitle-left">Array Size</Row>
 							<Row className="rowContainer-center">
 								<Col sm={10} xs={10} className="colContainer">
 									<Slider min={10} max={100} defaultValue={20} handle={handle} onChange={value=>this.setState({arraySize: value, constructNewArray: true, startSort: false})} />
 								</Col>
-								<Col sm={2} xs={2} className="colContainer, valueText">
+								<Col sm={2} xs={2} className="colContainer valueText">
 									{this.state.arraySize}
 								</Col>
 							</Row>
-							<Row className="rowContainer-left, subsubtitle-left">Delay in Milliseconds</Row>
+							<Row className="sliderTitle subsubtitle-left">Delay in Milliseconds</Row>
 							<Row className="rowContainer-center">
 								<Col sm={10} xs={10} className="colContainer">
 									<Slider min={0} max={1000} defaultValue={100} handle={handle} onChange={value=>this.setState({delay: value, constructNewArray: false})}   />
 								</Col>
-								<Col sm={2} xs={2} className="colContainer, valueText">
+								<Col sm={2} xs={2} className="colContainer valueText">
 									{this.state.delay}
 								</Col>
 							</Row>
