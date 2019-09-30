@@ -13,7 +13,12 @@ export default function sketch (p) {
 
 	p.setup = function() {
 		p.fill("#011E13");
-		p.createCanvas(window.innerWidth * 0.5, window.innerHeight * 0.5);
+		if(window.innerWidth >= 550) {
+			p.resizeCanvas(window.innerWidth * 0.55, window.innerHeight * 0.55);
+		}
+		else {
+			p.resizeCanvas(window.innerWidth * 0.9, window.innerHeight * 0.9);
+		}
 		numbers = Array(20).fill().map(() => p.random(1));
 		selectionSorter = p.selectionSort();
 		insertionSorter = p.insertionSort();
@@ -76,8 +81,14 @@ export default function sketch (p) {
 	}
 
 	p.draw = function() {
-		p.resizeCanvas(window.innerWidth * 0.5, window.innerHeight * 0.5);
-		columnWidth = window.innerWidth * 0.5 / numbers.length;
+		if(window.innerWidth >= 550) {
+			p.resizeCanvas(window.innerWidth * 0.55, window.innerHeight * 0.55);
+			columnWidth = window.innerWidth * 0.55 / numbers.length;
+		}
+		else {
+			p.resizeCanvas(window.innerWidth * 0.9, window.innerHeight * 0.9);
+			columnWidth = window.innerWidth * 0.9 / numbers.length;
+		}
 		p.background("#011E13");
 
 		millisecondsElapsed = p.millis();
