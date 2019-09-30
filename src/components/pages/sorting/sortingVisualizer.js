@@ -22,6 +22,7 @@ export default function sketch (p) {
 		mergeSorter = p.mergeSort(numbers, 0, numbers.length - 1);
 		quickSorter = p.quickSort(numbers, 0, numbers.length - 1);
 		lastSortedTime = p.millis();
+		p.strokeWeight(5);
 		p.fill("white");
 	}
 
@@ -118,12 +119,15 @@ export default function sketch (p) {
 	p.insertionSort = function*() {
 		for (let i = 1; i < numbers.length; i++) { 
 	        let currentElementVal = numbers[i]; 
+	        currentIndex = i;
+	        yield;
+
 	        let j = i - 1; 
 	        while (j >= 0 && numbers[j] > currentElementVal) { 
+	        	currentIndex = j;
+	            yield;
 	            numbers[j + 1] = numbers[j]; 
 	            j = j - 1; 
-	            currentIndex = j;
-	            yield;
 	        } 
 
 	        numbers[j + 1] = currentElementVal;

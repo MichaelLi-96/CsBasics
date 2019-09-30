@@ -36,3 +36,30 @@
 	font-weight: lighter;
 	color: #011E13;
 }
+
+@media (max-width: 900px) {
+	 #welcome-banner-title {
+		color: #011E13;
+		font-size: 75px;
+		font-weight: bold;
+	}
+
+	#welcome-banner-text {
+		color: #1ED761;
+		font-size: 18.75px;
+		margin-bottom: 125px;
+	}
+
+	#daily-quote-quote {
+		font-size: 26.25px;
+		font-weight: lighter;
+		color: #011E13;
+		margin-bottom: 10px;
+	}
+
+	#daily-quote-author {
+		font-size: 18.75px;
+		font-weight: lighter;
+		color: #011E13;
+	}
+}
