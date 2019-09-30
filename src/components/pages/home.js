@@ -16,7 +16,7 @@ class Home extends Component {
 	//TheySaidSo Famous Quotes API
 	async componentDidMount() {
 		window.scrollTo(0, 0);
-		const url = "http://quotes.rest/qod.json?category=inspire";
+		const url = "https://quotes.rest/qod.json?category=inspire";
 		const response = await fetch(url);
 		const data = await response.json();
 		this.setState({ quote: data.contents.quotes[0].quote, author: data.contents.quotes[0].author, loading: false });
