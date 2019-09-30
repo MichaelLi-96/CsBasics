@@ -50,3 +50,12 @@
 	height: auto;
 	border-radius: 10%;
 }
+
+@media (max-width: 900px) {
+	.nav-link {
+		font-size: 22.5px;
+		font-weight: normal;
+		color: white;
+		overflow-wrap: break-word;
+	}
+}

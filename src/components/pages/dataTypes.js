@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Table from "react-bootstrap/Table";
 import "../../assets/css/pages.css";
-import "../../assets/css/dataTypes.css"
 
 class DataTypes extends Component {
 	componentDidMount() {

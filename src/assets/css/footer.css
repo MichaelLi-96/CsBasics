@@ -22,3 +22,15 @@ footer {
 	font-size: 18px;
 }
 
+@media (max-width: 900px) {
+	#FooterText {
+		color: white;
+		font-size: 15px;
+	}
+
+	#CopyrightIcon {
+		margin-bottom: 4px;
+		margin-right: 2px;
+		font-size: 13.5px;
+	}
+}

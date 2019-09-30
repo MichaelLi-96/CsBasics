@@ -81,12 +81,6 @@
 	align-items: center;
 }
 
-th {
-	font-size: 25px !important;
-}
-td {
-	font-size: 25px !important;
-}
 .table-center-margin {
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -99,6 +93,16 @@ td {
 	text-align: center;
 	resize: both;
 	overflow: auto;
+}
+
+th {
+	font-size: 30px;
+	font-weight: bold;
+	
+}
+td {
+	font-size: 25px;
+	font-weight: normal;
 }
 
 .starIcon {
@@ -117,7 +121,7 @@ td {
 
 .code-text-lg {
 	width:100%;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: normal;
 	color: black;
 	text-align: left;
@@ -127,4 +131,103 @@ td {
 .image {
     width: 100%;
     height: auto;
+}
+
+@media (max-width: 900px) {
+	.title {
+		font-size: 40px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	.subtitle-left {
+		font-size: 30px;
+		font-weight: bold;
+		text-align: left;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.subtitle-center {
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.subsubtitle-center {
+		font-size: 26px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.subsubtitle-left {
+		font-size: 26px;
+		font-weight: bold;
+		text-align: left;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.text-center {
+		font-size: 22.5px;
+		font-weight: normal;
+		color: black;
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+
+	.text-left {
+		font-size: 22.5px;
+		font-weight: normal;
+		color: black;
+		text-align: left;
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+
+	th {
+		font-size: 22.5px;
+		font-weight: bold;
+		
+	}
+	td {
+		font-size: 18px;
+		font-weight: normal;
+	}
+
+	.starIcon {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	.code-text-sm {
+		width:100%;
+		font-size: 15px;
+		font-weight: normal;
+		color: black;
+		text-align: left;
+		margin: 10px;
+	}
+
+	.code-text-lg {
+		width:100%;
+		font-size: 18.75px;
+		font-weight: normal;
+		color: black;
+		text-align: left;
+		margin: 10px;
+	}
+
+	.image {
+	    width: 100%;
+	    height: auto;
+	}
+
 }
