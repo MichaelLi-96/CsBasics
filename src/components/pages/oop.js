@@ -18,7 +18,7 @@ public class Car {
 	// The constructor is where you set up all your class variables
 	// The constructor name is always the same as your class name
 	// This is what is called upon when you create a new Car object
-	publc Car(String model, String color) {
+	public Car(String model, String color) {
 		this.model = model;
 		this.color = color;
 		milesDriven = 0;
@@ -170,7 +170,7 @@ class Oop extends Component {
 					<div className="text-left">
 						<FaStar className="starIcon"/>
 						<mark>Method overloading</mark> is when different meanings are implied by the values of supplied variables. This means programmers are able to 
-						provide two or more separate methods in a class with the same name but different arguements. However, the method return type may or may not be different.
+						provide two or more separate methods in a class with the same name but different arguments. However, the method return type may or may not be different.
 						This allows programmers to reuse the same method name within the same class.
 					</div>
 					<div className="text-left">
@@ -182,7 +182,7 @@ class Oop extends Component {
 					<div className="text-left">
 						<FaStar className="starIcon"/>
 						<mark>Method overriding</mark> is when different meanings are implied by the code itself. This means defining a method in a child class that 
-						is already defined in the parent class with the same method name, arguements, and return type.
+						is already defined in the parent class with the same method name, arguments, and return type.
 					</div>
 					<div className="text-left">
 						Using method overriding in our example, each of the children classes Triangle, Circle, and Square has their own way to calculate area 

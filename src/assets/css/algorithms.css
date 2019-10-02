@@ -1,0 +1,66 @@
+.searchBar {
+	height: 60px;
+	font-size: 30px;
+}
+
+.form-control {
+	border-width: 2px;
+	border-radius: 10px;
+	box-shadow:         1.5px 1.5px 2.5px 3px #ccc;
+}
+
+.form-control:focus {
+	border-color: #ccc;
+	box-shadow: 0 0 0 0.2rem rgba(30, 215, 97, .75) !important;
+}
+
+table thead .caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 10px !important;
+	margin-right: -8px !important;
+	vertical-align: middle;
+	border-top: 10px dashed;
+	border-top: 10px solid \9;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	color: #1ED761;
+}
+
+table thead .dropup .caret, table thead .navbar-fixed-bottom .dropdown .caret {
+	border-top: 0;
+	border-bottom: 10px dashed;
+	border-bottom: 10px solid \9;
+	content: "";
+}
+
+.react-bootstrap-table-pagination-total {
+	font-size: 24px;
+
+}
+
+.page-link {
+	font-size: 26px;
+	color: white;
+	background-color: #011E13;
+	border: 1px solid #1ED761;
+}
+
+.page-link:hover {
+	color: #1ED761;
+	border-color: #1ED761;
+	background-color: #011E13;
+	font-weight: bold;
+}
+
+.page-link:focus {
+	box-shadow: none;
+}
+
+.page-item.active .page-link {
+	color: white;
+	border-color: #1ED761;
+	background-color: #1ED761;
+	font-weight: bold;
+}
