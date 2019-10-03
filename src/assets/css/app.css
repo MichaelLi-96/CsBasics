@@ -9,13 +9,9 @@ body {
 	/*top & bottom */
 	/* bottom = footer height */
     margin: 130px 0px 85px 0px;
-    font-family: 'Titillium Web', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
-    height: 100%;
-    width: 100%;
-    overflow: auto; 
-}
+    position: fixed;
+    overflow: hidden;
+  }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -29,6 +25,8 @@ mark {
 
 #body-container {
 	/*right & left */
-	margin: 0px 5vw 0px 5vw;
+  margin: 0px 5vw 0px 5vw;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 

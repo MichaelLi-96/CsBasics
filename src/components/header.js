@@ -16,7 +16,7 @@ class Header extends Component {
 	    }
 	  
 		this.handleClick = (e) => {
-			if (this.node.contains(e.currentTarget)) {
+			if (this.node.contains(e.target)) {
 				// if clicked inside menu do something
 			} 
 			else {
