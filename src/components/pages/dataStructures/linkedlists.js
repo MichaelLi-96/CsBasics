@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaStar } from "react-icons/fa";
@@ -84,21 +85,27 @@ class Linkedlists extends Component {
 					</ul>
 					<br />
 					Here is an example node class for a doubly LinkedList where each node has an int value and has a pointer to the next and previous node:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{nodeClass}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{nodeClass}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					To initialize a LinkedList of Integers, you write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{initalizeLinkedList}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{initalizeLinkedList}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					LinkedLists already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add and remove LinkedList elements:  
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{LinkedlistExample}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{LinkedlistExample}
+						</SyntaxHighlighter>
+					</Row>
 				</div>
 			</div>
 		);

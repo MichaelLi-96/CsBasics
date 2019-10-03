@@ -138,21 +138,29 @@ class Searching extends Component {
 						<Col sm={2} />
 					</Row>
 					<div className="subsubtitle-left">Examples:</div>
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{timeEx1}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{timeEx1}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{timeEx2}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{timeEx2}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{timeEx3}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{timeEx3}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{timeEx4}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{timeEx4}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					<div className="subtitle-left">Drop the Constants and Less Significant Terms!</div>
 					<div className="text-left">
@@ -177,13 +185,17 @@ class Searching extends Component {
 						input. The space complexity of an algorithm does not include the space taken by the input, only additional space.
 					</div>
 					<div className="subsubtitle-left">Examples:</div>
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{spaceEx1}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{spaceEx1}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{spaceEx2}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{spaceEx2}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 				</div>
 			</div>

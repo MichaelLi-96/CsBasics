@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaStar } from "react-icons/fa";
@@ -56,24 +57,30 @@ class Heaps extends Component {
 					<div className="subsubtitle-left">Min-Heap</div>
 					In a min-heap, a nodes value is less than or equal to all the values of its children nodes. This means that the root node contains the smallest value
 					of the entire tree. By default, a min-heap is implemented by a PriorityQueue. To initialize a min-heap of Integers, you would write: 
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{initalizeMinHeap}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{initalizeMinHeap}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					<div className="subsubtitle-left">Max-Heap</div>
 					In a max-heap, a nodes value is greater than or equal to all the values of its children nodes. This means that the root node contains the largest value
 					of the entire tree. Since a PriorityQueue implements a min-heap by default, we need to reverse the order of the heap to transform it to a max-heap.
 					To initialize a max-heap of Integers, you would write: 
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{initalizeMaxHeap}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{initalizeMaxHeap}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					PriorityQueues already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add, retrieve, remove elements in a min-heap using a PriorityQueue:<br />
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{priorityQueueExample}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{priorityQueueExample}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					<div className="subsubtitle-left">Mapping Heap Elements to an Array</div>
 					Even though a heap is represented as a complete binary tree, it can be implemented using an array. In this case, each node of a heap tree can be

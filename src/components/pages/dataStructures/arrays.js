@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import Table from "react-bootstrap/Table";
@@ -59,21 +60,27 @@ class Arrays extends Component {
 						</Table>
 					</div>
 					To initialize an int Array of size 10, you write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						int[] newArray = new int[10];
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							int[] newArray = new int[10];
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					Arrays like many other data structures can store any data type you want it to. For example, if you created an Apple class and wanted an array of 10 apple
 					objects you could write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						Apple[] appleArray = new Apple[10];
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							Apple[] appleArray = new Apple[10];
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					<mark>Remember, the starting index of all data structures is 0, not 1!</mark> To access or retrieve the 5th element of an int Array,
 					you would write int[4] and not int[5]. Arrays are initialized empty. To initialize an int Array with values, you could write: 
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{initalizeArray}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{initalizeArray}
+						</SyntaxHighlighter>
+					</Row>
 				</div>
 			</div>
 		);

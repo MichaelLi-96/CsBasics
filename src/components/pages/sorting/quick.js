@@ -167,9 +167,11 @@ class Quick extends Component {
 				<div className="subtitle-left">
 					Code Implementation:
 				</div>
-				<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-					{quickSort}
-				</SyntaxHighlighter>
+				<Row>
+					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+						{quickSort}
+					</SyntaxHighlighter>
+				</Row>
 			</div>
 		);
   	}

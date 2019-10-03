@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import Table from "react-bootstrap/Table";
@@ -31,15 +32,19 @@ class Matrices extends Component {
 					<br />
 					When you construct a matrix, you have to specify that the array has more than one dimension by adding more than one size parameter in brackets.
 					To initialize a 2-dimensional array with 4 rows and 6 columns, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{initalizeMatrix}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{initalizeMatrix}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					Similarly to arrays, indexes are required to access a specific element from a 2-dimensional array. To retrieve the element in the row 2 
 					and column 4, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						int number = myTwoDimArray[2][4];
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							int number = myTwoDimArray[2][4];
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					The table below shows how you would retrieve elements from a 4 rows x 5 columns 2-dimensional array named nums:
 					<div className="table-center-margin"> 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaStar } from "react-icons/fa";
@@ -51,16 +52,20 @@ class Queues extends Component {
 					<br />				
 					Being an interface, a queue is abstract and does not have its own concrete class for declaration. The most commonly used is the LinkedList 
 					implementation of a queue. To initialize a queue of Integers, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{initalizeQueue}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{initalizeQueue}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					Queues already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add and remove queue elements:  
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{queueExample}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{queueExample}
+						</SyntaxHighlighter>
+					</Row>
 				</div>
 			</div>
 		);

@@ -188,7 +188,7 @@ table thead .dropup .caret, table thead .navbar-fixed-bottom .dropdown .caret {
 
 	.titleButton {
 		font-weight: normal !important; 
-		font-size: 20px !important;
+		font-size: 16px !important;
 		background-color: transparent !important;
 	}
 
@@ -198,11 +198,13 @@ table thead .dropup .caret, table thead .navbar-fixed-bottom .dropdown .caret {
 
 	.tagButton {
 		font-weight: normal !important; 
-		font-size: 18px !important;
+		font-size: 12px !important;
 		background-color: #1ED761 !important;
 		font-weight: bold !important;
 		border-radius: 25px;
-		margin-right: 30px;
+		margin-right: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
 		pointer-events: none;
 		color: #011E13;
 	}

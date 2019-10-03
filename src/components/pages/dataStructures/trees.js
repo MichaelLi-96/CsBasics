@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaStar } from "react-icons/fa";
@@ -51,9 +52,11 @@ class Trees extends Component {
 					node.<br />
 					<br />
 					Here is an example node class for a tree where each node is holding an int value and can have multiple children:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{treeNodeClass}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{treeNodeClass}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					<div className="subsubtitle-left">Tree Terminology</div>
 					<ul>
@@ -69,9 +72,11 @@ class Trees extends Component {
 					<div className="subsubtitle-left">Binary Trees</div>
 					A binary tree is a tree where each node can have <mark>at most two children (0-2)</mark>. We usually name the two children the left and right nodes. Below is 
 					an example node class for a binary tree:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{binaryTreeNodeClass}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{binaryTreeNodeClass}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					<div className="subsubtitle-left">Types of Binary Trees</div>
 					<ul>

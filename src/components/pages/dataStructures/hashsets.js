@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row } from "react-bootstrap";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { androidstudio } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { FaStar } from "react-icons/fa";
@@ -59,17 +60,21 @@ class Hashmaps extends Component {
 					</ul>
 					<br />
 					To initialize a HashSet of strings, you would write:
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{initalizeHashSet}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{initalizeHashSet}
+						</SyntaxHighlighter>
+					</Row>
 					<br />
 					In Java, HashSets already have built in methods to do common functions which can be 
 					found <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html" target="_blank" rel='noreferrer noopener'>here</a>.
 					Below is a basic example on how to add and remove HashSet elements:<br />
 					<br />
-					<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
-						{HashSetExample}
-					</SyntaxHighlighter>
+					<Row>
+						<SyntaxHighlighter language="java" showLineNumbers style={androidstudio} className="code-text-lg">
+							{HashSetExample}
+						</SyntaxHighlighter>
+					</Row>
 				</div>
 			</div>
 		);
