@@ -26,7 +26,6 @@ class Header extends Component {
 		}
 	}
   
-
     componentDidMount() {
 		document.addEventListener('click', this.handleClick, false);      
 	}
@@ -38,8 +37,16 @@ class Header extends Component {
 
   	render() {
 	    return(
-	    	<header id="header" ref={node => this.node = node}>
-				<Navbar collapseOnSelect id="navbar" expand="xl" variant="dark" onToggle={this.setIsNavExpanded} expanded={this.state.isNavExpanded}>
+	    	<header id="header">
+				<Navbar
+					id="navbar"
+					ref={node => this.node = node} 
+					collapseOnSelect 
+					expand="xl" 
+					variant="dark" 
+					onToggle={this.setIsNavExpanded} 
+					expanded={this.state.isNavExpanded}
+				>
 					<Link to="/">
 					 	<Navbar.Brand style={styles.logo}>
 							<img

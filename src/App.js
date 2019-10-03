@@ -18,17 +18,17 @@ import Sorting from "./components/pages/sorting";
 class App extends Component {
   render() {
     return(
-      <Router onUpdate={() => window.scrollTo(0, 0)}>
+      <Router>
         <Header />
         <Route exact path='/' component={Home} />
-          <div id="body-container">
-            <Route exact path='/ObjectOrientedProgramming' component={ObjectOrientedProgramming} />
-            <Route exact path='/DataTypes' component={DataTypes} />
-            <Route exact path='/DataStructures' component={DataStructures} />
-            <Route exact path='/Algorithms' component={Algorithms} />
-            <Route exact path='/bigO' component={BigO} />
-            <Route exact path='/Sorting' component={Sorting} />
-          </div>
+        <div id="body-container">
+          <Route exact path='/ObjectOrientedProgramming' component={ObjectOrientedProgramming} />
+          <Route exact path='/DataTypes' component={DataTypes} />
+          <Route exact path='/DataStructures' component={DataStructures} />
+          <Route exact path='/Algorithms' component={Algorithms} />
+          <Route exact path='/bigO' component={BigO} />
+          <Route exact path='/Sorting' component={Sorting} />
+        </div>
         <Footer />
       </Router>
     );
