@@ -20,7 +20,7 @@ class AlgorithmModal extends Component {
   	render() {
     	return(
 			<div>
-				<Button onClick={() => this.setShow()} className="tableButton">
+				<Button onClick={() => this.setShow()} className="titleButton">
 					{this.props.name}
 				</Button>
 

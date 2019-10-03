@@ -38,7 +38,7 @@
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link:hover{
-	color: white !important;
+	color: #011E13 !important;
 }
 
 #table-title {

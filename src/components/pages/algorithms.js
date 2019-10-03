@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from "react-bootstrap/Button";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
@@ -14,18 +15,31 @@ const { SearchBar } = Search;
 
 function titleFormatter(cell, row) {
     return (
-      <span>	
         <Modal 
         	name={row.algorithm_title} 
         	description={row.algorithm_description} 
         	tags={row.algorithm_tags} 
         	code={row.algorithm_code} 
         />
-      </span>
+    );
+}
+
+function tagFormatter(cell, row) {
+	const tags = row.algorithm_tags.map((tag, index) =>
+		<Button key={index} className="tagButton">{tag}</Button>
+	);
+    return (
+    	<div className="tagsContainer">
+    		{tags}
+    	</div>
     );
 }
 
 const columns = [{
+	dataField: '_id',
+	text: 'Id',
+	hidden: true
+}, {
 	dataField: 'algorithm_title',
 	text: 'Title',
 	sort: true,
@@ -46,10 +60,15 @@ const columns = [{
 			backgroundColor: '#343A40'
 		};
 	}
+},  {
+	dataField: 'algorithm_description',
+	text: 'Description',
+	hidden: true
 }, {
 	dataField: 'algorithm_tags',
 	text: 'Tags',
 	sort: true,
+	formatter: tagFormatter,
 	headerStyle: {
 		backgroundColor: '#343A40',
 		color: 'white'
@@ -66,14 +85,6 @@ const columns = [{
 			backgroundColor: '#343A40'
 		};
 	}
-}, {
-	dataField: 'algorithm_description',
-	text: 'Description',
-	hidden: true
-}, {
-	dataField: 'algorithm_code',
-	text: 'Code',
-	hidden: true
 }];
 
 const customTotal = (from, to, size) => (
@@ -121,7 +132,7 @@ class Algorithms extends Component {
 	}
 
 	componentDidUpdate() {
-		window.scrollTo(0, 0);
+	  	window.scrollTo(0, 0);
 	}
 
   	render() {
