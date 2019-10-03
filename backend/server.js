@@ -4,14 +4,14 @@ const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const algorithmRoutes = express.Router();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 let Algorithm = require('./algorithm.model');
 
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect('mongodb://127.0.0.1:27017/algorithms', err => {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/algorithms', err => {
   console.log(err ||  'MongoDB connected at mongodb://127.0.0.1:27017/algorithms');
 })
 const connection = mongoose.connection;
