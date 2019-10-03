@@ -9,8 +9,9 @@ body {
 	/*top & bottom */
 	/* bottom = footer height */
     margin: 130px 0px 85px 0px;
-    position: fixed;
-    overflow: hidden;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
   }
 
 code {
@@ -26,7 +27,12 @@ mark {
 #body-container {
 	/*right & left */
   margin: 0px 5vw 0px 5vw;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow: hidden;
+    cursor: pointer;
+  }
 }
 
