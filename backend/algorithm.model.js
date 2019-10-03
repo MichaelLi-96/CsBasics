@@ -8,6 +8,9 @@ let algorithmSchema = new Schema({
 	algorithm_description: {
 		type: String
 	},
+	algorithm_tags: {
+		type: [String]
+	},
 	algorithm_code: {
 		type: String
 	}

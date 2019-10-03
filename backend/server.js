@@ -61,6 +61,7 @@ algorithmRoutes.route('/update/:id').put(function(req, res) {
 		else {
 			algorithm.algorithm_title = req.body.algorithm_title;
 			algorithm.algorithm_description = req.body.algorithm_description;
+			algorithm.algorithm_tags = req.body.algorithm_tags;
 			algorithm.algorithm_code = req.body.algorithm_code;
 
 			algorithm.save()

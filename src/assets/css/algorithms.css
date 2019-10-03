@@ -64,3 +64,46 @@ table thead .dropup .caret, table thead .navbar-fixed-bottom .dropdown .caret {
 	background-color: #1ED761;
 	font-weight: bold;
 }
+
+.tableButton {
+	font-weight: normal !important; 
+	font-size: 25px !important;
+	background-color: transparent !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+	color: #1ED761 !important;
+}
+
+.modal-open .modal {
+	overflow-y: auto;
+}
+
+.modal-open[style] {
+	padding-right: 0px !important;
+}
+
+.centerModal {
+	width: 80%;
+    max-width: none!important;
+}
+.modal-header {
+	border-bottom: 2px solid #dee2e6;
+}
+
+.modal-footer {
+	border-top: 2px solid #dee2e6;
+}
+
+.modalTitle {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.modalBody {
+	font-size: 30px;
+}
+
+.table td, .table th {
+	vertical-align: middle;
+}

@@ -1,58 +1,35 @@
 import React, { Component } from "react";
-import BootstrapTable from 'react-bootstrap-table-next';
-import paginationFactory from 'react-bootstrap-table2-paginator';
-import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
-import 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css';
+import BootstrapTable from "react-bootstrap-table-next";
+import paginationFactory from "react-bootstrap-table2-paginator";
+import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
+import axios from "axios";
+import Modal from "./algorithms/modal";
+import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
+import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
+import "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit.min.css";
 import "../../assets/css/pages.css";
 import "../../assets/css/algorithms.css"
 
 const { SearchBar } = Search;
 
-const products = [{
-		id: "1",
-		title: "Traverse a matrix",
-		tags: "arrays"
-	},{
-		id:"2",
-		title: "Traverse a matrix",
-		tags: "arrays"
-	},{
-		id:"3",
-		title: "Traverse a matrix",
-		tags: "arrays"
-	},{
-		id:"4",
-		title: "Traverse a matrix",
-		tags: "arrays"
-	},{
-		id:"5",
-		title: "Traverse a matrix",
-		tags: "arrays"
-	},{
-		id:"6",
-		title: "Traverse a tree",
-		tags: "tree"
-	},{
-		id:"7",
-		title: "Traverse a matrix",
-		tags: "arrays"
-}];
-
-function linkFormatter(cell, row) {
+function titleFormatter(cell, row) {
     return (
-      <span>
-        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html" target="_blank" rel='noreferrer noopener'>{ cell }</a>
+      <span>	
+        <Modal 
+        	name={row.algorithm_title} 
+        	description={row.algorithm_description} 
+        	tags={row.algorithm_tags} 
+        	code={row.algorithm_code} 
+        />
       </span>
     );
 }
 
 const columns = [{
-	dataField: 'title',
+	dataField: 'algorithm_title',
 	text: 'Title',
 	sort: true,
-	formatter: linkFormatter,
+	formatter: titleFormatter,
 	headerStyle: {
 		backgroundColor: '#343A40',
 		color: 'white'
@@ -70,7 +47,7 @@ const columns = [{
 		};
 	}
 }, {
-	dataField: 'tags',
+	dataField: 'algorithm_tags',
 	text: 'Tags',
 	sort: true,
 	headerStyle: {
@@ -89,6 +66,14 @@ const columns = [{
 			backgroundColor: '#343A40'
 		};
 	}
+}, {
+	dataField: 'algorithm_description',
+	text: 'Description',
+	hidden: true
+}, {
+	dataField: 'algorithm_code',
+	text: 'Code',
+	hidden: true
 }];
 
 const customTotal = (from, to, size) => (
@@ -119,11 +104,20 @@ class Algorithms extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			
+			showAlgorithm: false,
+			algorithms: [],
 		}
 	}
+
 	componentDidMount() {
 	  window.scrollTo(0, 0);
+	  axios.get('http://localhost:4000/algorithms')
+	  	.then(response => {
+	  		this.setState({ algorithms: response.data });
+	  	})
+	  	.catch(function (error) {
+	  		console.log(error);
+	  	})
 	}
 
 	componentDidUpdate() {
@@ -140,8 +134,8 @@ class Algorithms extends Component {
 				</div>
 				<div className="content">
 					<ToolkitProvider
-					  keyField="id"
-					  data={ products }
+					  keyField="_id" 
+					  data={ this.state.algorithms }
 					  columns={ columns }
 					  search
 					>
@@ -158,8 +152,8 @@ class Algorithms extends Component {
 					        </form>
 					        <br />
 					        <BootstrapTable
-						        keyField='id' 
-							 	data={ products } 
+						        keyField="_id" 
+							 	data={ this.state.algorithms } 
 							 	columns={ columns } 
 							 	bordered={ false } 
 		  						pagination={ paginationFactory(paginationOptions) }
