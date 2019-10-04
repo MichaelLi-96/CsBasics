@@ -11,9 +11,14 @@ let Algorithm = require('./algorithm.model');
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/algorithms', err => {
-  console.log(err ||  'MongoDB connected at mongodb://127.0.0.1:27017/algorithms');
-})
+mongoose.connect(process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/algorithms', { useNewUrlParser: true }, function (err) {
+    if (err) {
+        console.log("connection error:", err);
+    } else {
+        console.log("MongoDB connection successful");
+    }
+});
+
 const connection = mongoose.connection;
 
 connection.once('open', function() {

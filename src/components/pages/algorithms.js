@@ -122,7 +122,7 @@ class Algorithms extends Component {
 
 	componentDidMount() {
 	  window.scrollTo(0, 0);
-	  axios.get(process.env.MONGODB_URI || 'http://localhost:4000/algorithms')
+	  axios.get(process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/algorithms')
 	  	.then(response => {
 	  		this.setState({ algorithms: response.data });
 	  	})
