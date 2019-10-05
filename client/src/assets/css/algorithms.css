@@ -14,6 +14,10 @@
 	box-shadow: 0 0 0 0.2rem rgba(30, 215, 97, .75) !important;
 }
 
+#tableContainer {
+	margin-top: 30px;
+}
+
 table thead .caret {
 	display: inline-block;
 	width: 0;
@@ -97,17 +101,27 @@ table thead .dropup .caret, table thead .navbar-fixed-bottom .dropdown .caret {
 	color: #011E13;
 }
 
-.modal-open .modal {
-	overflow-y: auto;
+.modal-open {
+  padding-right: 0 !important;
+  scroll-behavior: smooth;
 }
 
-.modal-open[style] {
-	padding-right: 0px !important;
+.modal {
+	display: flex !important;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 5vh;
+	padding-bottom: 7vh; 
+}
+
+.modal-content{
+	border-radius: 0.5rem;
 }
 
 .centerModal {
-	width: 80%;
-    max-width: none!important;
+	width: 60%;
+    max-width: none !important;
+    margin: 0;
 }
 
 .close {
@@ -198,7 +212,7 @@ table thead .dropup .caret, table thead .navbar-fixed-bottom .dropdown .caret {
 
 	.tagButton {
 		font-weight: normal !important; 
-		font-size: 12px !important;
+		font-size: 10px !important;
 		background-color: #1ED761 !important;
 		font-weight: bold !important;
 		border-radius: 25px;
@@ -209,18 +223,9 @@ table thead .dropup .caret, table thead .navbar-fixed-bottom .dropdown .caret {
 		color: #011E13;
 	}
 
-	.modal-open .modal {
-		overflow-y: auto;
-	}
-
-	.modal-open[style] {
-		padding-right: 0px !important;
-	}
-
 	.centerModal {
-		width: 80%;
+		width: 95%;
 	    max-width: none!important;
-	    margin-left: 40px;
 	}
 
 	.close {

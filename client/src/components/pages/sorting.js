@@ -34,7 +34,7 @@ class Sorting extends Component {
 					Each kind of sorting algorithm is differentiated by their time and space complexities.
 				</div>
 				<Tab.Container defaultActiveKey="SelectionSort">
-					<Row>
+					<Row id="sortingButtonContainer">
 						<Col sm={2} />
 						<Col sm={8}>
 							<div id="anchor-name" style={{position: "absolute", top: -135}} />

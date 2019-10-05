@@ -27,7 +27,6 @@ class AlgorithmModal extends Component {
 				<Modal
 					show={this.state.show}
 					onHide={() => this.setShow()}
-					centered
 					dialogClassName="centerModal"
 				>
 					<Modal.Header closeButton>
