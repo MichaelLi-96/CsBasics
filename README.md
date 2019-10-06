@@ -12,7 +12,7 @@ CsBasics is an application that provides information about fundamental topics of
 
 ## Sorting Visualizer
 
-This project has a built in sorting visualizer that was written in p5.js, a JavaScript library used for creative coding. Implemented 6 different kinds of sorts:
+This project has a built in sorting visualizer that was written in p5.js, a JavaScript library used for creative coding. Implements 6 different kinds of sorts:
 * Selection
 * Insertion
 * Bubble
@@ -50,3 +50,4 @@ The client and server side of this application were both deployed seperately usi
 ## Acknowledgments
 
 * [Lawrence Ma](https://github.com/lawrencema415) who helped me with backend deployment issues
+* TheySaidSo Famous Quotes API for their daily inspirational quote of the day
