@@ -25,7 +25,7 @@ function titleFormatter(cell, row) {
 }
 
 function tagFormatter(cell, row) {
-	const tags = row.algorithm_tags.map((tag, index) =>
+	const tags = row.algorithm_tags.sort().map((tag, index) =>
 		<Button key={index} className="tagButton">{tag}</Button>
 	);
     return (
