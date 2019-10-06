@@ -1,6 +1,6 @@
 # CsBasics
 
-CsBasics is an application that provides information about fundamental topics of computer science and programming. This website is meant to be a helpful resource for new programmers as well as people who are looking to refresh their cs knowledge. View the app [here](https://csbasics.herokuapp.com/)!
+CsBasics is an application that provides information about fundamental topics of computer science and programming. This website is meant to be a helpful resource for new programmers as well as people who are looking to refresh their cs knowledge. Coded with responsiveness in mind. Looks great on any size viewport such as desktop or mobile. View the app [here](https://csbasics.herokuapp.com/)!
 
 ### Topics Covered
 * Object-Oriented Programming
