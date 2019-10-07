@@ -1,23 +1,22 @@
 html {
     position: relative;
-    min-height: 100%;
+    min-height: 100vh;
     scroll-behavior: smooth;
 }
 
 body {
-	/*top & bottom */
-	/* bottom = footer height */
-    margin: 150px 0px 85px 0px;
+    /*top margin*/
+    margin-top: 11vh;
     font-family: 'Titillium Web', sans-serif;
     -webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
     -webkit-overflow-scrolling: touch;
+    overflow-y: scroll !important;
 }
 
 body.modal-open {
-  height: 100vh;
-  overflow-y: hidden;
-  position: fixed;
+    height: 100vh;
+    position: fixed;
 }
 
 code {
@@ -25,24 +24,37 @@ code {
     monospace;
 }
 
+
 mark {
-  background-color: #D7FDE8;
-  padding: 0;
+    background-color: #D7FDE8;
+    padding: 0;
 }
 
 #body-container {
-	/*right & left */
-  margin: 0px 5vw 0px 5vw;
+    /*right & left */
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 4vh;
+    padding-bottom: 10vh;
 }
 
 @media (max-width: 900px) {
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-    font-size: 16px;
+      font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+      font-size: 16px;
   }
+
   body {
-    cursor: pointer;
+      cursor: pointer;
+  }
+
+  #body-container {
+      /*right & left */
+      margin-left: 5vw;
+      margin-right: 5vw;
+      padding-top: 9vmax;
+      padding-bottom: 10vh;
   }
 }
 

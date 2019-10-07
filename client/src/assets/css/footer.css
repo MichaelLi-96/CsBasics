@@ -3,12 +3,11 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 50px;
+	height: 6vh;
 	position: absolute;
-    left: 0;
-    bottom: 0;
+	left: 0;
+	bottom: 0;
     width: 100%;
-    overflow:hidden;
 }
 
 #FooterText {

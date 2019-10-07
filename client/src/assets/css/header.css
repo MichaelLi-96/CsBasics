@@ -50,6 +50,10 @@ button:focus {
 }
 
 @media (max-width: 900px) {
+	.navbar {
+		padding: 0px 0px;
+	}
+
 	a.nav-link {
 		color: white !important;
 		font-size: 19px;
