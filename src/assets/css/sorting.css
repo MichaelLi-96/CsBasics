@@ -158,10 +158,23 @@
 		font-size: 26px;
 	}
 
+	.rowContainer-sides {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding-right: 2vw;
+		padding-left: 2vw;
+	}
+
 	.btn-primary {
 		font-size: 19px;
 		background-color: #011E13;
 		border:none;
+		margin-top: 5px;
+		margin-bottom: 5px; 
 	}
 
 	.rc-slider-handle {

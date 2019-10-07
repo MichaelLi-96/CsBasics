@@ -22,7 +22,7 @@ class Home extends Component {
 		const data = await response.json();
 		this.setState({ quote: data.contents.quotes[0].quote, author: data.contents.quotes[0].author, loading: false });
 		axios.get('https://csbasics-server.herokuapp.com/algorithms')
-	  	.then(function (response){
+	  	.then((response) => {
 	  		console.log("Woke up csBasics server");
 	  	})
 	  	.catch(function (error) {
@@ -36,7 +36,7 @@ class Home extends Component {
 	
   	render() {
 	    return(
-	    	<div className="flex-container">		
+	    	<div id="home" className="flex-container">		
 	    		<div id="welcome-banner" className="banner">
 	    			<div id="welcome-banner-title">CsBasics</div>
 	    			<div id="welcome-banner-text">Your online cs resource. Java edition.</div>

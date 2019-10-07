@@ -111,6 +111,11 @@ const paginationOptions = {
 	}]
 };
 
+const defaultSorted = [{
+  dataField: '_id.$oid',
+  order: 'asc'
+}];
+
 class Algorithms extends Component {
 	constructor(props) {
 		super(props);
@@ -123,7 +128,7 @@ class Algorithms extends Component {
 	componentDidMount() {
 	  window.scrollTo(0, 0);
 	  axios.get('https://csbasics-server.herokuapp.com/algorithms')
-	  	.then(function (response) {
+	  	.then((response) => {
 	  		this.setState({ algorithms: response.data });
 	  	})
 	  	.catch(function (error) {
@@ -164,6 +169,7 @@ class Algorithms extends Component {
 							 	columns={ columns } 
 							 	bordered={ false } 
 		  						pagination={ paginationFactory(paginationOptions) }
+		  						defaultSorted={ defaultSorted } 
 		  						bootstrap4
 						        { ...props.baseProps }
 					        />
