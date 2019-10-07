@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Spinner from 'react-bootstrap/Spinner'
+import Spinner from 'react-bootstrap/Spinner';
+import axios from "axios";
 import "../../assets/css/pages.css";
 import "../../assets/css/home.css"
 
@@ -20,6 +21,13 @@ class Home extends Component {
 		const response = await fetch(url);
 		const data = await response.json();
 		this.setState({ quote: data.contents.quotes[0].quote, author: data.contents.quotes[0].author, loading: false });
+		axios.get('https://csbasics-server.herokuapp.com/algorithms')
+	  	.then(function (response){
+	  		console.log("Woke up csBasics server");
+	  	})
+	  	.catch(function (error) {
+	  		console.log(error);
+	  	});
 	}
 
 	componentDidUpdate() {

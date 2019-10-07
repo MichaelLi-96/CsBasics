@@ -5,20 +5,20 @@ html {
 }
 
 body {
-	/*top & bottom */
-	/* bottom = footer height */
-    margin: 150px 0px 85px 0px;
+	/*top margin*/
+    margin-top: 11vh;
     font-family: 'Titillium Web', sans-serif;
     -webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
     -webkit-overflow-scrolling: touch;
+    overflow-y: scroll !important;
 }
 
 body.modal-open {
   height: 100vh;
-  overflow-y: hidden;
-  position: fixed;
+  position: absolute !important;
 }
+
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -32,7 +32,10 @@ mark {
 
 #body-container {
 	/*right & left */
-  margin: 0px 5vw 0px 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-top: 4vh;
+  padding-bottom: 2vh;
 }
 
 @media (max-width: 900px) {

@@ -123,16 +123,12 @@ class Algorithms extends Component {
 	componentDidMount() {
 	  window.scrollTo(0, 0);
 	  axios.get('https://csbasics-server.herokuapp.com/algorithms')
-	  	.then(response => {
+	  	.then(function (response) {
 	  		this.setState({ algorithms: response.data });
 	  	})
 	  	.catch(function (error) {
 	  		console.log(error);
-	  	})
-	}
-
-	componentDidUpdate() {
-	  	window.scrollTo(0, 0);
+	  	});
 	}
 
   	render() {

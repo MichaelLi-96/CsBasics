@@ -6,9 +6,7 @@ class Footer extends Component {
   	render() {
 	    return(
 			<footer>
-				<div>
-					<div id="FooterText"><FaRegCopyright id="CopyrightIcon" /> Michael Li</div>
-				</div>
+				<div id="FooterText"><FaRegCopyright id="CopyrightIcon" /> Michael Li</div>
 			</footer>
 	    );
   	}
