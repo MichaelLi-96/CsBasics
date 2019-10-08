@@ -2,6 +2,7 @@
 	background-image: url("../images/welcome.jpg");
 	min-height: 625px;
 	text-align: center;
+	margin-top: 115px;
 }
 
 #welcome-banner-title {
@@ -13,7 +14,7 @@
 #welcome-banner-text {
 	color: #1ED761;
 	font-size: 25px;
-	margin-bottom: 25vh;
+	margin-bottom: 150px;
 }
 
 #quote-container {
@@ -42,6 +43,7 @@
 		background-image: url("../images/welcome.jpg");
 		min-height: 500px;
 		text-align: center;
+		margin-top: 100px;
 	}
 
 	 #welcome-banner-title {
@@ -53,7 +55,7 @@
 	#welcome-banner-text {
 		color: #1ED761;
 		font-size: 18px;
-		margin-bottom: 25vh;
+		margin-bottom: 150px;
 	}
 
 	#daily-quote-quote {
