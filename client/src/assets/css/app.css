@@ -5,8 +5,6 @@ html {
 }
 
 body {
-    /*top margin*/
-    margin-top: 11vh;
     font-family: 'Titillium Web', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -34,8 +32,8 @@ mark {
     /*right & left */
     margin-left: 5vw;
     margin-right: 5vw;
-    padding-top: 4vh;
-    padding-bottom: 10vh;
+    margin-top: 150px;
+    margin-bottom: 90px;
 }
 
 @media (max-width: 900px) {
@@ -53,8 +51,8 @@ mark {
       /*right & left */
       margin-left: 5vw;
       margin-right: 5vw;
-      padding-top: 9vmax;
-      padding-bottom: 10vh;
+      margin-top: 125px;
+      margin-bottom: 65px;
   }
 }
 
