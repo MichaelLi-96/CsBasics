@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
+import Spinner from 'react-bootstrap/Spinner';
 import axios from "axios";
 import Modal from "./algorithms/modal";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
@@ -121,6 +122,7 @@ class Algorithms extends Component {
 		super(props);
 		this.state = {
 			showAlgorithm: false,
+			loading: true,
 			algorithms: []
 		}
 	}
@@ -129,7 +131,7 @@ class Algorithms extends Component {
 	  window.scrollTo(0, 0);
 	  axios.get('https://csbasics-server.herokuapp.com/algorithms')
 	  	.then((response) => {
-	  		this.setState({ algorithms: response.data });
+	  		this.setState({ algorithms: response.data, loading: false });
 	  	})
 	  	.catch(function (error) {
 	  		console.log(error);
@@ -163,16 +165,22 @@ class Algorithms extends Component {
 						        />
 					        </form>
 					        <br />
-					        <BootstrapTable
-						        keyField="_id.$oid"
-							 	data={ this.state.algorithms } 
-							 	columns={ columns } 
-							 	bordered={ false } 
-		  						pagination={ paginationFactory(paginationOptions) }
-		  						defaultSorted={ defaultSorted } 
-		  						bootstrap4
-						        { ...props.baseProps }
-					        />
+					        {this.state.loading || this.state.algorithms === [] ? (
+					        	<div id="spinnerContainer">
+					        		<Spinner animation="border" style={{ color: "#011E13" }} />
+					        	</div>
+					        ) : (
+						        <BootstrapTable
+							        keyField="_id.$oid"
+								 	data={ this.state.algorithms } 
+								 	columns={ columns } 
+								 	bordered={ false } 
+			  						pagination={ paginationFactory(paginationOptions) }
+			  						defaultSorted={ defaultSorted } 
+			  						bootstrap4
+							        { ...props.baseProps }
+						        />
+					        )}
 					      </div>
 					    )
 					  }
