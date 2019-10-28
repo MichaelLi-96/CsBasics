@@ -11,10 +11,10 @@ const initalizeMatrix =
 `int[][] myMatrix = new int[4][6];
 // or manually with predetermined values
 int[][] myMatrix = {
-{0, 1, 2, 3, 4, 5, 6},
-{0, 1, 2, 3, 4, 5, 6},
-{0, 1, 2, 3, 4, 5, 6},
-{0, 1, 2, 3, 4, 5, 6}
+	{0, 1, 2, 3, 4, 5, 6},
+	{0, 1, 2, 3, 4, 5, 6},
+	{0, 1, 2, 3, 4, 5, 6},
+	{0, 1, 2, 3, 4, 5, 6}
 };
 `
 class Matrices extends Component {

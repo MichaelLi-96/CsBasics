@@ -11,7 +11,7 @@ const initalizeMinHeap =
 
 const initalizeMaxHeap = 
 `PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
-// or use a lamba expression
+// or use a lambda expression
 PriorityQueue<Integer> maxHeap = new PriorityQueue<>((x, y) -> y - x);`
 
 const priorityQueueExample =
