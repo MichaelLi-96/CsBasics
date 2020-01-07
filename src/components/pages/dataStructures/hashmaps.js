@@ -22,11 +22,11 @@ public class HashMapExample {
         // Adding elements to the HashMap
         // Adding into a HashMap is also called putting into a HashMap
         groceryItems.put("Milk", 4.50);
-        groceryItems.add("Ham", 3.75);
-        groceryItems.add("Apple", 1.25);
-        groceryItems.add("Carrot", 0.50);
-        groceryItems.add("Bread", 5.50);
-        groceryItems.add("Eggs", 3.35);
+        groceryItems.put("Ham", 3.75);
+        groceryItems.put("Apple", 1.25);
+        groceryItems.put("Carrot", 0.50);
+        groceryItems.put("Bread", 5.50);
+        groceryItems.put("Eggs", 3.35);
 
         // Retrieving items from the HashMap
         // Retrieving from a HashMap is also called getting from a HashMap
