@@ -16,7 +16,7 @@ const corsOptions = {
 }
 app.use(cors(corsOptions));
 
-mongoose.connect('mongodb://MikeLi:password123@ds329058.mlab.com:29058/heroku_j4d5chrp');
+mongoose.connect('mongodb+srv://MikeLi:password123@heroku-j4d5chrp.neah3.mongodb.net/heroku_j4d5chrp?retryWrites=true&w=majority');
 
 app.get('/', (req,res) => res.send(`<h1>csBasics server is running...</h1>`));
 
