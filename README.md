@@ -41,7 +41,7 @@ This project has a built in sorting visualizer that was written in p5.js, a Java
 
 ## Deployment
 
-The client and server side of this application were both deployed seperately using heroku. The server side uses herokus built in mongoDB, mLab. 
+The client and server side of this application were both deployed seperately using heroku. The server side uses the cloud database service MongoDB Atlas. 
 
 ## Authors
 
